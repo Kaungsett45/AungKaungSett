@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import-normalize;
 
 :root {
   --btn-color :#1A8B9C;

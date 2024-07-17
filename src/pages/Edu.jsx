@@ -21,7 +21,7 @@ export default function Edu() {
     <div className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-3  flex justify-center items-center '
     style= {{
                    
-                    backgroundImage: `url(../../public/mountain.svg)`,
+                    backgroundImage:  `url(../../public/mountain.svg)`,
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'bottom',
                   

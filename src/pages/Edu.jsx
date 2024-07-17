@@ -34,7 +34,7 @@ export default function Edu() {
     }}>Project</h2>
     </div>
     {/* Hobbies */}
-    <div className='cursor-pointer text-white border-[#1A8B9C] border-4 rounded-lg  col-span-3 row-span-2 flex justify-center items-center bg-[url({hobbies})] '
+    <div className='cursor-pointer text-white border-[#1A8B9C] border-4 rounded-lg  col-span-3 row-span-2 flex justify-center items-center '
      style={{ backgroundColor: '#204057' ,
                backgroundImage: `url(../../public/hobbies.svg)`,
                backgroundRepeat: 'no-repeat',

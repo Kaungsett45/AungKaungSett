@@ -5,7 +5,8 @@ import {
 import App from "../App";
 import Intro from '../pages/Overall'
 
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
     {
       path: "/",
       element: <App/>,
@@ -16,6 +17,10 @@ import Intro from '../pages/Overall'
            }
       ]
     }
-  ]);
+  ],
+  {
+    basename: '/AungKaungSett',  // Replace with your subdirectory path
+  }
+  );
 
   export default router;

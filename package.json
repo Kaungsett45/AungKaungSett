@@ -2,7 +2,7 @@
   "name": "responsiveportfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://kaungsett45.github.io/Reactportfolio/",
+  "homepage": "https://kaungsett45.github.io/AungKaungSett/",
   "type": "module",
   "scripts": {
     "start": "react-scripts start --host 0.0.0.0",

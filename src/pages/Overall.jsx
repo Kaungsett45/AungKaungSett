@@ -1,4 +1,5 @@
 import React from 'react'
+import star from '../../public/star.svg'
 import Introparagraph from './Introparagraph';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -12,7 +13,7 @@ export default function Overall() {
 
          <div className=''>  
          
-                 <img src="/star.svg" alt="Star" className='absolute right-3 w-4'/>
+                 <img src={star}alt="Star" className='absolute right-3 w-4'/>
                 <div className=''>
 
                     <p className='text-base font-rubik leading-8 xs:text-lg'>Hello 👋 !</p>

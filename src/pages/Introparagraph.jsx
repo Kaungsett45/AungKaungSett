@@ -18,14 +18,14 @@ export default function Introparagraph() {
     <>
       <h2
         className="absolute tracking-wide right-0 text-center text-lg  font-extrabold w-[110px] py-1 px-2 rounded-tr-lg rounded-tl-lg font-rale xs:text-xl xs:py-2 xs:w-[130px]"
-        style={{ color: "#FFDAB9", backgroundColor: "#2B545A" }}
+        style={{ color: "#FFDAB9", backgroundColor: "#204057" }}
       >
         INTRO
       </h2>
 
       <div
         className="my-8 p-4 rounded-l-lg font-mari font-thin rounded-b-lg text-xs xs:text-lg xs:p-6"
-        style={{ backgroundColor: "#2B545A", color: "white" }}
+        style={{ backgroundColor: "#204057", color: "white" }}
       >
         {/*first para*/}
         {first && (

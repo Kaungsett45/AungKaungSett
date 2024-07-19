@@ -31,7 +31,7 @@ export default function Introparagraph() {
         {first && (
           <>
             <p className="leading-5 pb-3">
-              I began my programming journey during the COVID-19 pandemic,
+              I began my programming journey during 2022,
               initially focusing on IT and FE exams from ITPEC.
             </p>
             <p className="leading-5 pb-3">

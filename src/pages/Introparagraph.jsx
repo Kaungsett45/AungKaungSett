@@ -7,19 +7,17 @@ export default function Introparagraph() {
   let ShowFirst = () => {
     setFirst(true);
     setSecond(false);
-    setThird(false);
   };
 
   let ShowSecond = () => {
     setFirst(false);
     setSecond(true);
-    setThird(false);
   };
 
   return (
     <>
       <h2
-        className="absolute right-0 text-center text-lg  font-extrabold w-[110px] py-1 px-2 rounded-tr-lg rounded-tl-lg font-rale xs:text-xl xs:py-2 xs:w-[130px]"
+        className="absolute tracking-wide right-0 text-center text-lg  font-extrabold w-[110px] py-1 px-2 rounded-tr-lg rounded-tl-lg font-rale xs:text-xl xs:py-2 xs:w-[130px]"
         style={{ color: "#FFDAB9", backgroundColor: "#1A8B9C" }}
       >
         INTRO

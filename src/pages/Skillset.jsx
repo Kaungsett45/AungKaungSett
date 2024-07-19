@@ -65,7 +65,7 @@ export default function Middlepage(){
            <img src={star} alt="Star" className='absolute right-2 w-3 xs:w-6'/>
             
             <div  style={{ borderRadius: '0 0 100px 0' }} className="cut-corner">
-                <h2 className="mx-1 font-rale font-extrabold  text-lg xs:text-x"   style={{ color: '#FFDAB9' }}>Skill Set</h2>
+                <h2 className="mx-1 font-rale font-extrabold tracking-wide  text-lg xs:text-x"   style={{ color: '#FFDAB9' }}>SKILL SET</h2>
             </div>
 
             <div className='flex items-center'>

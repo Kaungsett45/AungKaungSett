@@ -17,7 +17,7 @@ export default function Overall() {
                 <div className=''>
 
                     <p className='text-xl font-monst font-bold leading-8 xs:text-lg'>Hello 👋 !</p>
-                    <p className='text-sm font-monst font-bold ml-4 leading-8 xs:text-base'> I AM <span className='text-base font-monst xs:text-lg'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT..</span></p>
+                    <p className='text-sm font-monst font-bold ml-4 leading-8 xs:text-base'> I AM <span className='mx-2 text-base font-monst xs:text-lg'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT..</span></p>
                     {/* <p className='text-xs leading-10'>I _M A K E _T H E _C O M P L E X _S I M P L E .</p> */}
                 </div>
             <div className='flex justify-center m-4'>

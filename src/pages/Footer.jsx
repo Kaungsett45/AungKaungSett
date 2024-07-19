@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
     </div>
         <div className='bg-[#457582] py-1 xs:py-2'  >
-         <p className='font-bubble text-white text-[9px] xs:text-[11px]'
+         <p className='mx-4 font-bubble text-white text-[9px] xs:text-[11px]'
           style={{
            
         }}>Copyright © 2024 Aung Kaung Sett. All rights reserved.</p>

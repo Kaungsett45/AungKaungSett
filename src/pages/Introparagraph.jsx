@@ -19,10 +19,10 @@ export default function Introparagraph() {
   return (
     <>
       <h2
-        className="absolute right-0 text-center text-base w-[110px] py-1 px-2 rounded-tr-lg rounded-tl-lg font-rubik xs:text-xl xs:py-2 xs:w-[130px]"
+        className="absolute right-0 text-center text-lg  font-extrabold w-[110px] py-1 px-2 rounded-tr-lg rounded-tl-lg font-rale xs:text-xl xs:py-2 xs:w-[130px]"
         style={{ color: "#FFDAB9", backgroundColor: "#1A8B9C" }}
       >
-        Intro
+        INTRO
       </h2>
 
       <div
@@ -68,15 +68,11 @@ export default function Introparagraph() {
 
         <div className="flex justify-end">
           <button
-            className={`bg-white w-4 h-4 mx-1 rounded-full ${
-              first ? "bg-[#FF6F61]" : ""
-            }`}
+            className={`bg-white w-4 h-4 mx-1 rounded-full  ${first ? 'bg-[#FF6F61]' : ''}`}
             onClick={ShowFirst}
           ></button>
           <button
-            className={`bg-white w-4 h-4 mx-1 rounded-full ${
-              second ? "bg-[#FF6F61]" : ""
-            }`}
+            className={`bg-white w-4 h-4 mx-1 rounded-full  ${second ? 'bg-[#FF6F61]' : ''}`}
             onClick={ShowSecond}
           ></button>
         </div>

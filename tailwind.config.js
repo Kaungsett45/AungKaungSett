@@ -10,16 +10,17 @@ export default {
         '7': '6px',
       },
       fontFamily: {
-        'roboto-mono': ['Roboto Mono', 'monospace'],
-        'portfolio': ['Playwrite AU TAS', 'cursive'],
-        'rubik' : [ 'Rubik Mono One','monospace'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'monst' : [ 'Montserrat', 'sans-serif'],
+        'rale' : [ 'Raleway','sans-serif'],
         'mari' : ["Merriweather Sans", 'sans-serif'],
         'bubble':["Rubik Bubbles ", 'system-ui'],
+     
       },
       screens: {
         'xss':'375px',
         'xs': '460px', // Custom extra small breakpoint
-        // 'sm': '640px', // Default small breakpoint
+        'sm': '640px', // Default small breakpoint
         // 'md': '768px', // Default medium breakpoint
         // 'lg': '1024px', // Default large breakpoint
         // 'xl': '1280px', // Default extra-large breakpoint

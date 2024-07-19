@@ -11,12 +11,12 @@ export default function Edu() {
         <img src={edu} alt="Education" />
         
       </div>
-        <h2 className='text-sm  font-rubik '>Education</h2>
+        <h2 className='text-base  font-extrabold  font-monst '>Education</h2>
     </div>
   
     {/* Loading */}
     <div className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-2  flex justify-center items-center'>
-      <h2 className='text-sm  font-rubik '>Loading</h2>
+      <h2 className='text-base  font-extrabold  font-monst'>Loading</h2>
     </div>
   
     {/* Project */}
@@ -29,7 +29,7 @@ export default function Edu() {
                   
                  
     }}>
-      <h2  className=' text-sm font-rubik '
+      <h2  className='text-base  font-extrabold  font-monst '
       style={{ textOrientation: 'upright',
                     writingMode: 'vertical-lr',
                     color: '#FF6F61'
@@ -44,7 +44,7 @@ export default function Edu() {
               
               }}
     >
-      <h2 className='font-rubik  text-sm tracking-wide'>Hobbies</h2>
+      <h2 className='text-base  font-extrabold  font-monst'>Hobbies</h2>
     </div>
   
   </div>

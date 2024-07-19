@@ -6,11 +6,11 @@
 :root {
   --btn-color :#1A8B9C;
   --border-color: #204057;
-  --roboto : 17px Roboto Mono, monospace;
-  --rubic : 1.2rem Rubik Mono One, monospace;
-  --mono : 1.3rem  Rubik Mono One, monospace;
-  --intro-font : 1.1rem Merriweather Sans, sans-serif;
-  --bubble :1.2rem  Rubik Bubbles , system-ui;
+  --roboto : 17px "Roboto", sans-serif;
+  --mon : 1.2rem "Montserrat", sans-serif;
+  --rale : 1.3rem  "Raleway", sans-serif;
+  --intro-font : 1.1rem "Merriweather Sans", sans-serif;
+  --bubble :1.2rem  "Rubik Bubbles", system-ui;
 }
 .navbar {
   padding-top: env(safe-area-inset-top);
@@ -82,6 +82,11 @@
 
 }
 
+@media only screen and (min-width: 641px) and (max-width: 768px)  {
+    .navbar{
+        margin: 0px 20px ;
+    }
+}
 html, body {
   height: 100%;
   margin: 0;

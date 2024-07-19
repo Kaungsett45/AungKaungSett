@@ -1,13 +1,24 @@
 import star from '../../public/star.svg'
 import { Outlet ,NavLink } from 'react-router-dom'
+import { motion } from "framer-motion"
+
 export default function Navigation(){
 
 
     return(
         <>
         <nav className="px-2 py-1 relative flex justify-between items-center items-align ">
-            <h2 ><NavLink to="#" className='text-lg font-roboto font-bold xs:text-xl sm:text-2xl'>A</NavLink></h2>
-    
+        <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 360, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20
+  }}
+>
+            <h2 ><NavLink to="#" className='text-base font-roboto font-bold rounded-full  bg-[#204057] text-white py-1 px-3 xs:text-xl sm:text-2xl'>AKS</NavLink></h2>
+    </motion.div>
             <div className=' flex  items-center items-align'>
                 <p className='mx-4 font-bold font-roboto text-lg xs:text-xl sm:mx-8 '><NavLink to="#">Blog</NavLink></p>
                 <button className='

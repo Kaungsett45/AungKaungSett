@@ -1,5 +1,7 @@
 import React from 'react'
 import edu from '../../public/education.svg'
+import mountain from '../../public/mountain.svg'
+import hobbies from '../../public/hobbies.svg'
 export default function Edu() {
   return (
     <div className='edures grid grid-cols-5 grid-rows-5 gap-4 p-4 min-h-[330px]'>
@@ -21,7 +23,7 @@ export default function Edu() {
     <div className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-3  flex justify-center items-center '
     style= {{
                    
-                    backgroundImage:  `url(../../public/mountain.svg)`,
+                    backgroundImage:  mountain,
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'bottom',
                   
@@ -36,7 +38,7 @@ export default function Edu() {
     {/* Hobbies */}
     <div className='cursor-pointer text-white border-[#1A8B9C] border-4 rounded-lg  col-span-3 row-span-2 flex justify-center items-center '
      style={{ backgroundColor: '#204057' ,
-               backgroundImage: `url(../../public/hobbies.svg)`,
+               backgroundImage: hobbies,
                backgroundRepeat: 'no-repeat',
                backgroundPosition: 'left bottom'
               

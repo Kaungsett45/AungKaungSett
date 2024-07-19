@@ -1,6 +1,7 @@
 import Navi from './pages/Nav'
 
 import Footer from './pages/Footer'
+import SplashScreen from './pages/Splashscreen'
 
 function App() {
 
@@ -17,4 +18,4 @@ function App() {
       )
 }
 
-export default App
+export default SplashScreen(App);

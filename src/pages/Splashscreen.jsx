@@ -19,7 +19,7 @@ const container = {
 function SplashMessage() {
   return (
       <motion.div
-      className="flex items-center justify-center min-h-screen font-monst font-extrabold text-lg text-[#1A8B9C] bg-[#CDF7FD]"
+      className="flex items-center justify-center min-h-screen font-monst font-extrabold text-lg text-[#1A8B9C] "
       variants={container}
       initial="hidden"
       animate="visible"

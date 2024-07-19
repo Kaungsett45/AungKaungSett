@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 export default function Introparagraph() {
-
   const [first, setFirst] = useState(true);
   const [second, setSecond] = useState(false);
 
@@ -20,7 +19,7 @@ export default function Introparagraph() {
   return (
     <>
       <h2
-        className="absolute right-0 text-center text-lg w-[100px] py-1 px-1 rounded-tr-lg rounded-tl-lg font-rubik xs:text-xl xs:py-2 xs:w-[130px]"
+        className="absolute right-0 text-center text-base w-[110px] py-1 px-2 rounded-tr-lg rounded-tl-lg font-rubik xs:text-xl xs:py-2 xs:w-[130px]"
         style={{ color: "#FFDAB9", backgroundColor: "#1A8B9C" }}
       >
         Intro
@@ -34,18 +33,16 @@ export default function Introparagraph() {
         {first && (
           <>
             <p className="leading-5 pb-3">
-              I began my programming journey during COVID-19, initially focusing
-              on Java.
+              I began my programming journey during the COVID-19 pandemic,
+              initially focusing on IT and FE exams from ITPEC.
             </p>
             <p className="leading-5 pb-3">
-              
-              After 2024, I've shifted my focus to React , node.js to enhance my
-              web development. skills.
+              This experience allowed me to acquire valuable knowledge related
+              to IT and other areas. During this time, I started learning Java,
             </p>
             <p className="leading-5 pb-2">
-             
-              Explore my portfolio to see my projects and recent work with
-              React, JavaScript,Node.js and Java .
+              which was necessary to pass the exams. Java quickly became my main
+              programming language, and I began working with Spring.
             </p>
           </>
         )}
@@ -53,16 +50,18 @@ export default function Introparagraph() {
         {/*Seccond para*/}
         {second && (
           <>
-            <p className="leading-5 pb-3">I bdflkhsdfhsva.</p>
             <p className="leading-5 pb-3">
-          
-              After 2024, I've shifted my focus to React , node.js to enhance my
-              web development. skills.
+              In 2024, my interest shifted towards frameworks, leading me to
+              explore React. I became fascinated with JavaScript and decided to
+              pursue a career as a React developer.
+            </p>
+            <p className="leading-5 pb-3">
+              Currently, I am deepening my skills in this area, learning
+              everything related to React development.
             </p>
             <p className="leading-5 pb-2">
-             
               Explore my portfolio to see my projects and recent work with
-              React, JavaScript,Node.js and Java .
+              React, JavaScript, Node.js, and Java.
             </p>
           </>
         )}

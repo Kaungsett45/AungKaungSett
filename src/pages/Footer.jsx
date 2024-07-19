@@ -11,7 +11,7 @@ export default function Footer() {
       <div
      
       >
-    <h2 className='text-lg  px-4 py-2 font-rubik  tracking-wide xss:px-6'
+    <h2 className='text-lg px-4 py-2 font-rale font-extrabold tracking-wide xss:px-6'
       style={{
         color: '#FFDAB9',
       }}
@@ -19,7 +19,7 @@ export default function Footer() {
     
         <div className='flex  flex-col items-start p-3 justify-between xss:p-4 xs:px-5 xs:py-2'>
           <div>
-              <button className='flex items-center  border-2 rounded-lg px-3 py-1  text-white  text-sm font-rubik'>
+              <button className='flex items-center  border-2 rounded-lg px-3 py-1  text-white  text-base font-monst'>
                   <FontAwesomeIcon icon={faLinkedin} className='mx-1 w-6 h-6 '/> LINKEDIN
               </button>
             </div>

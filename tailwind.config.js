@@ -21,7 +21,7 @@ export default {
         'xss':'375px',
         'xs': '460px', // Custom extra small breakpoint
         'sm': '640px', // Default small breakpoint
-        // 'md': '768px', // Default medium breakpoint
+        'md': '768px', // Default medium breakpoint
         // 'lg': '1024px', // Default large breakpoint
         // 'xl': '1280px', // Default extra-large breakpoint
         // '2xl': '1536px', // Default 2xl breakpoint

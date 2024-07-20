@@ -4,7 +4,7 @@ import mountain from '../../public/mountain.svg'
 import hobbies from '../../public/hobbies.svg'
 export default function Edu() {
   return (
-    <div className='edures grid grid-cols-5 grid-rows-5 gap-4 p-4 min-h-[330px]'>
+    <div className='edures grid grid-cols-5 grid-rows-5 gap-4 p-4 min-h-[330px] md:min-w-[350px]'>
     {/* Education */}
     <div className='border-[#1A8B9C] border-4 rounded-lg col-span-3 row-span-3 flex flex-col justify-center items-center'>
       <div className='w-16 h-16'>

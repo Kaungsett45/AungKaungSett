@@ -68,7 +68,7 @@ export default function Middlepage(){
                 <h2 className="mx-1 font-rale font-extrabold tracking-wide  text-lg xs:text-x"   style={{ color: '#FFDAB9' }}>SKILL SET</h2>
             </div>
 
-            <div className='flex items-center'>
+            <div className='flex items-center md:w-[410px]'>
                 <div className="m-5  w-8">
           
       <button  className={`w-4 h-4 mx-1 my-1 cursor-pointer rounded-full border-2 border-black ${color ? 'bg-[#FF6F61]' : ''}`} onClick={handleClick}></button>

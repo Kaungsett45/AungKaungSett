@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,9 +20,11 @@ export default function Footer() {
     
         <div className='flex  flex-col items-start p-3 justify-between xss:p-4 xs:px-5 xs:py-2'>
           <div>
+            <Link to="https://www.linkedin.com/in/aung-kaung-sett-4244b721a/" target="_blank">
               <button className='flex items-center  border-2 rounded-lg px-3 py-1  text-white  text-base font-monst'>
                   <FontAwesomeIcon icon={faLinkedin} className='mx-1 w-6 h-6 '/> LINKEDIN
               </button>
+              </Link>
             </div>
             <div className='w-full my-3 flex justify-start flex-col text-white font-bold'>
               <button className='text-sm flex justify-between xs:text-base'>

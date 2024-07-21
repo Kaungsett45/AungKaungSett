@@ -4,8 +4,12 @@ import {
   } from "react-router-dom";
 import App from "../App";
 import Intro from '../pages/Overall'
+import Blogs from "../Blogs/Blogs"
+import Hobbies from "../component/Hobbies";
+  
 
-  const router = createBrowserRouter(
+
+const router = createBrowserRouter(
     [
     {
       path: "/",
@@ -14,7 +18,11 @@ import Intro from '../pages/Overall'
            {
             path: "/",
             element: <Intro/>,
+           },{
+            path : "/Blog",
+            element : <Blogs/>
            }
+         
       ]
     }
   ],

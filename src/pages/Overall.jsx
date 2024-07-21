@@ -1,5 +1,6 @@
 import React from 'react'
 import star from '../../public/star.svg'
+import profile from '../../public/profile.jpg'
 import Introparagraph from './Introparagraph';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -27,7 +28,7 @@ export default function Overall() {
                 </div>
             <div className='flex justify-center m-4'>
                 <div className=' w-64 h-64  block md:hidden '>
-                            <img src="profile.jpg" alt="profile" className='w-full h-full rounded-full object-cover'/>
+                            <img src={profile} alt="profile" className='w-full h-full rounded-full object-cover'/>
                 </div>
             </div>
 
@@ -53,14 +54,14 @@ export default function Overall() {
               {isMobile ? (
                     <div className='flex justify-center items-center mx-8 '>
                     <div className='w-64 h-64'>
-                      <img src="profile.jpg" alt="profile" className='w-full h-full rounded-full object-cover' />
+                      <img src={profile} alt="profile" className='w-full h-full rounded-full object-cover' />
                     </div>
                   </div>
                  
                  ):(
                   <div className='hidden flex justify-center m-4 hidden md:block'>
                   <div className=' w-64 h-64   '>
-                              <img src="profile.jpg" alt="profile" className='w-full h-full rounded-full object-cover'/>
+                              <img src={profile} alt="profile" className='w-full h-full rounded-full object-cover'/>
                   </div>
               </div> 
                  )}

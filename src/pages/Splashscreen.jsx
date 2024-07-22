@@ -12,14 +12,14 @@ const container = {
   };
   
   const item = {
-    hidden: { x: 300, opacity: 0 }, 
+    hidden: { x:20, opacity: 0 }, 
     visible: { x: 0, opacity: 1 }, 
   };
 
 function SplashMessage() {
   return (
       <motion.div
-      className="flex items-center justify-center min-h-screen overflow-hidden font-monst font-extrabold text-lg text-[#1A8B9C] "
+      className="flex items-center justify-center min-h-screen  overflow-x-hidden  font-monst font-extrabold text-lg text-[#1A8B9C] "
       variants={container}
       initial="hidden"
       animate="visible"

@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { motion } from "framer-motion"
 
 const container = {
-    hidden: { opacity: 1 }, // Ensuring the container itself is visible
+    hidden: { opacity: 1 }, 
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Stagger the children
+        staggerChildren: 0.2, 
       },
     },
   };
@@ -19,7 +19,7 @@ const container = {
 function SplashMessage() {
   return (
       <motion.div
-      className="flex items-center justify-center min-h-screen font-monst font-extrabold text-lg text-[#1A8B9C] "
+      className="flex items-center justify-center min-h-screen overflow-hidden font-monst font-extrabold text-lg text-[#1A8B9C] "
       variants={container}
       initial="hidden"
       animate="visible"
@@ -44,8 +44,7 @@ export default function SplashScreen(WrappedComponent) {
 
     async componentDidMount() {
       try {
-        // Put here your await requests/ API requests
-        setTimeout(() => {
+         setTimeout(() => {
           this.setState({
             loading: false,
           });
@@ -59,10 +58,8 @@ export default function SplashScreen(WrappedComponent) {
     }
 
     render() {
-      // while checking user session, show "loading" message
       if (this.state.loading) return SplashMessage();
 
-      // otherwise, show the desired route
       return <WrappedComponent {...this.props} />;
     }
   };

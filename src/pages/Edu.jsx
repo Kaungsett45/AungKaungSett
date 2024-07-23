@@ -4,16 +4,21 @@ import mountain from '../../public/mountain.svg'
 import Hobbies from '../component/Hobbies'
 import { useState } from 'react'
 import Education from '../component/Education'
+import Project from '../component/Project'
 export default function Edu() {
 
   let [hobbies ,setHobbies] = useState(false);
   let [edu ,setEdu] = useState(false);
+  let [pj ,setPj] = useState(false);
   
   let showHobbies =()=>{
       setHobbies(!hobbies);
   }
   let showEdu =()=>{
     setEdu(!edu);
+  }
+  let showPj =()=>{
+    setPj(!pj);
   }
 
   return (
@@ -36,7 +41,8 @@ export default function Edu() {
     </div>
   
     {/* Project */}
-    <div className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-3  flex justify-center items-center '
+    <button className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-3  flex justify-center items-center '
+     onClick={showPj}
     style= {{
                    
                     backgroundImage:  mountain,
@@ -50,7 +56,7 @@ export default function Edu() {
                     writingMode: 'vertical-lr',
                     color: '#FF6F61'
     }}>Project</h2>
-    </div>
+    </button>
     {/* Hobbies */}
    
     <button  className='cursor-pointer text-white border-[#1A8B9C] border-4 rounded-lg  col-span-3 row-span-2 flex justify-center items-center '
@@ -70,6 +76,9 @@ export default function Edu() {
       )}
     {edu &&(
        <Education showEdu={showEdu}/>
+      )}
+    {pj &&(
+       <Project showPj={showPj}/>
       )}
 </>
   )

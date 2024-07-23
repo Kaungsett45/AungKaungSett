@@ -1,14 +1,19 @@
 import React from 'react'
-import edu from '../../public/education.svg'
+import eduimage from '../../public/education.svg'
 import mountain from '../../public/mountain.svg'
 import Hobbies from '../component/Hobbies'
 import { useState } from 'react'
+import Education from '../component/Education'
 export default function Edu() {
 
   let [hobbies ,setHobbies] = useState(false);
-
+  let [edu ,setEdu] = useState(false);
+  
   let showHobbies =()=>{
       setHobbies(!hobbies);
+  }
+  let showEdu =()=>{
+    setEdu(!edu);
   }
 
   return (
@@ -16,14 +21,15 @@ export default function Edu() {
 <>
     <div className='edures grid grid-cols-5 grid-rows-5 gap-4 p-4 min-h-[330px] md:min-w-[350px]'>
     {/* Education */}
-    <div className='border-[#1A8B9C] border-4 rounded-lg col-span-3 row-span-3 flex flex-col justify-center items-center'>
+    <button className='border-[#1A8B9C] border-4 rounded-lg col-span-3 row-span-3 flex flex-col justify-center items-center'
+    onClick={showEdu}
+    >
       <div className='w-16 h-16'>
-        <img src={edu} alt="Education" />
+        <img src={eduimage} alt="Education" />
         
       </div>
         <h2 className='text-base  font-extrabold  font-monst '>Education</h2>
-    </div>
-  
+    </button>
     {/* Loading */}
     <div className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-2  flex justify-center items-center'>
       <h2 className='text-base  font-extrabold  font-monst'>Loading</h2>
@@ -61,6 +67,9 @@ export default function Edu() {
 
     {hobbies &&(
        <Hobbies showHobbies={showHobbies}/>
+      )}
+    {edu &&(
+       <Education showEdu={showEdu}/>
       )}
 </>
   )

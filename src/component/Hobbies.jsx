@@ -15,15 +15,15 @@ export default function Hobbies({showHobbies}) {
             <div className='p-4 py-2'>
                 <div className='flex justify-between items-center p-2 m-2 border-[#1A8B9C] border-2 rounded-lg'>
                     <img src={vg} alt="vanguard" className='w-16'  loading="lazy"/>
-                    <p className='font-mari text-base font-bold'>Cardfight Vanguard</p>
+                    <p className='font-mari text-sm font-bold'>Cardfight Vanguard</p>
                 </div>
                 <div className='flex justify-between items-center p-2 m-2 border-[#1A8B9C] border-2 rounded-lg'>
                     <img src={music} alt="music" className='w-16'  loading="lazy"/>
-                    <p className='font-mari text-base font-bold'>Music</p>
+                    <p className='font-mari text-sm font-bold'>Music</p>
                 </div>
                 <div className='flex justify-between items-center p-2 m-2 border-[#1A8B9C] border-2 rounded-lg'>
                     <img src={camera} alt="music" className='w-16'  loading="lazy"/>
-                    <p className='font-mari text-base font-bold'>Photography</p>
+                    <p className='font-mari text-sm font-bold'>Photography</p>
                 </div>
             </div>
        </div>

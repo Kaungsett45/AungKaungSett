@@ -65,10 +65,10 @@ export default function Middlepage(){
            <img src={star} alt="Star" className='absolute right-2 w-3 xs:w-6'/>
             
             <div  style={{ borderRadius: '0 0 100px 0' }} className="cut-corner">
-                <h2 className="mx-1 font-rale font-extrabold tracking-wide  text-lg xs:text-x"   style={{ color: '#FFDAB9' }}>SKILL SET</h2>
+                <h2 className="mx-1 font-rale font-extrabold tracking-wide  text-lg xs:text-x lg:text-2xl"   style={{ color: '#FFDAB9' }}>SKILL SET</h2>
             </div>
 
-            <div className='flex items-center md:w-[410px]'>
+            <div className='flex items-center md:w-[410px] lg:w-[460px]'>
                 <div className="m-5  w-8">
           
       <button  className={`w-4 h-4 mx-1 my-1 cursor-pointer rounded-full border-2 border-black ${color ? 'bg-[#FF6F61]' : ''}`} onClick={handleClick}></button>
@@ -92,7 +92,7 @@ export default function Middlepage(){
                 </div>
          
             </div>
-                <img src={star} alt="Star" className='absolute left-2 w-3 '/>
+                <img src={star} alt="Star" className='absolute left-2 w-3  lg:top-16 lg:w-4'/>
            </div>
         </>
     )

@@ -24,7 +24,7 @@ export default function Edu() {
   return (
 
 <>
-    <div className='edures grid grid-cols-5 grid-rows-5 gap-4 p-4 min-h-[330px] md:min-w-[350px]'>
+    <div className='edures grid grid-cols-5 grid-rows-5 gap-4 p-4 min-h-[330px] md:min-w-[350px] lg:min-w-[400px]'>
     {/* Education */}
     <button className='border-[#1A8B9C] border-4 rounded-lg col-span-3 row-span-3 flex flex-col justify-center items-center'
     onClick={showEdu}
@@ -33,15 +33,15 @@ export default function Edu() {
         <img src={eduimage} alt="Education" />
         
       </div>
-        <h2 className='text-base  font-extrabold  font-monst '>Education</h2>
+        <h2 className='text-base  font-extrabold  font-monst lg:text-lg'>Education</h2>
     </button>
     {/* Loading */}
     <div className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-2  flex justify-center items-center'>
-      <h2 className='text-base  font-extrabold  font-monst'>Loading</h2>
+      <h2 className='text-base  font-extrabold  font-monst lg:text-lg'>Loading</h2>
     </div>
   
     {/* Project */}
-    <button className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-3  flex justify-center items-center '
+    <button className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-3  flex justify-center items-center lg:text-lg'
      onClick={showPj}
     style= {{
                    
@@ -59,7 +59,7 @@ export default function Edu() {
     </button>
     {/* Hobbies */}
    
-    <button  className='cursor-pointer text-white border-[#1A8B9C] border-4 rounded-lg  col-span-3 row-span-2 flex justify-center items-center '
+    <button  className='cursor-pointer text-white border-[#1A8B9C] border-4 rounded-lg  col-span-3 row-span-2 flex justify-center items-center lg:text-lg '
       onClick={showHobbies}
       style={{ backgroundColor: '#204057' ,
      backgroundImage: hobbies,

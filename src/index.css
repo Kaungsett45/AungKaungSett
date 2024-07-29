@@ -130,8 +130,8 @@
       padding: 0px;
     }
     .imgcontain{
-      width: 360px;
-      height:360px;
+      width: 320px;
+      height:320px;
     }
     .cut-corner {
       width: 230px;
@@ -148,5 +148,36 @@
       object-fit:contain;
       }
 }
+@media only screen and (min-width: 1000px)   {
+
+  .navbar{
+    margin: auto 60px;
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 1100px)   {
+
+  .navbar{
+    margin: auto 100px;
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 1200px)   {
+
+  .navbar{
+    margin: auto 160px;
+    padding: 0px;
+  }
+}
 
 
+@media only screen and (min-width: 1340px)  {
+
+  .navbar{
+    margin: auto 260px;
+    padding: 0px;
+  }
+
+ 
+
+}

@@ -45,7 +45,7 @@ export default function Overall() {
                 </div>
                 
 
-                <div className='relative border-[2px] border-transparent'>
+                <div className='relative border-[2px] border-transparent '>
                       <Introparagraph/>
                 </div>
 

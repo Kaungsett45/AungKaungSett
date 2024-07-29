@@ -13,7 +13,7 @@ import tailwind from '../../public/tailwind.svg'
 export default function Project({showPj}) {
   return (
     
-    <div className='p-4 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center'>
+    <div className='p-4 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center xl:px-[160px]'>
        <div className='bg-white w-full rounded-lg'>
             <div className='rounded-t-lg rounded-tr-lg px-4 py-2 flex justify-between items-center bg-[#204057]'>  
                     <h2 className='text-[#FF6F61] text-base  font-extrabold  font-monst'>Projects</h2>
@@ -22,7 +22,7 @@ export default function Project({showPj}) {
            
                 <div className='flex justify-between p-2 m-2 border-[#1A8B9C] border-2 rounded-lg'>
                     <div>
-                        <img src={camera} alt="music" className='w-24 h-32'  loading="lazy"/>
+                        <img src={camera} alt="music" className='w-26 h-32'  loading="lazy"/>
                        
                     </div>
                     <div>
@@ -45,8 +45,18 @@ export default function Project({showPj}) {
 
                     </div>
                 </div>
-           
+                <div className="flex justify-center p-2 ">
+          <button
+            className={` w-4 h-4 mx-1 rounded-full bg-black `}
+         
+          ></button>
+          <button
+            className={` w-4 h-4 mx-1 rounded-full bg-black `}
+
+          ></button>
+        </div>
        </div>
+      
     </div>
   )
 }

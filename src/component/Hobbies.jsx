@@ -6,7 +6,7 @@ import camera from '../../public/camera.svg'
 export default function Hobbies({showHobbies}) {
   return (
     
-    <div className='p-4 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center lg:p-12'>
+    <div className='p-4 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center lg:p-12 xl:px-[160px]'>
        <div className='bg-white w-full rounded-lg'>
             <div className='rounded-t-lg rounded-tr-lg px-4 py-2 flex justify-between items-center bg-[#204057]'>  
                     <h2 className='text-[#FF6F61] text-base  font-extrabold  font-monst lg:text-2xl'>Hobbies</h2>

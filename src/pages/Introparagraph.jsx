@@ -30,6 +30,7 @@ export default function Introparagraph() {
         {/*first para*/}
         {first && (
           <>
+         <div className='xl:h-[260px]'>
             <p className="leading-5 pb-3">
               I began my programming journey during 2022,
               initially focusing on IT and FE exams from ITPEC.
@@ -42,12 +43,14 @@ export default function Introparagraph() {
               which was necessary to pass the exams. Java quickly became my main
               programming language, and I began working with Spring.
             </p>
+            </div>
           </>
         )}
 
         {/*Seccond para*/}
         {second && (
           <>
+           <div className='xl:h-[260px]'>
             <p className="leading-5 pb-3">
               In 2024, my interest shifted towards frameworks, leading me to
               explore React. I became fascinated with JavaScript and decided to
@@ -61,6 +64,7 @@ export default function Introparagraph() {
               Explore my portfolio to see my projects and recent work with
               React, JavaScript, Node.js, and Java.
             </p>
+            </div>
           </>
         )}
 

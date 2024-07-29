@@ -12,13 +12,13 @@ export default function Footer() {
       <div
      
       >
-    <h2 className='text-lg px-4 py-2 font-rale font-extrabold tracking-wide xss:px-6 lg:text-2xl'
+    <h2 className='text-lg px-4 py-2 font-rale font-extrabold tracking-wide xss:px-6 lg:text-2xl xl:px-[260px] sxl:px-[60px] 1sxl:px-[100px] 2sxl:px-[160px] '
       style={{
         color: '#FFDAB9',
       }}
     >CONTACT</h2>
     
-        <div className='flex  flex-col items-start p-3 justify-between xss:p-4 xs:px-5 xs:py-2'>
+        <div className='flex  flex-col items-start p-3 justify-between xss:p-4 xs:px-5 xs:py-2 xl:px-[260px] sxl:px-[60px] 1sxl:px-[100px]  2sxl:px-[160px] '>
           <div>
             <Link to="https://www.linkedin.com/in/aung-kaung-sett-4244b721a/" target="_blank">
               <button className='flex items-center  border-2 rounded-lg px-3 py-1  text-white  text-base font-monst md:text-lg lg:border-4'>
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
         </div>
     </div>
-        <div className='bg-[#457582] py-1 xs:py-2'  >
+        <div className='bg-[#457582] py-1 xs:py-2 xl:px-[260px] sxl:px-[60px] 1sxl:px-[100px] 2sxl:px-[160px]'  >
          <p className='mx-4 font-bubble text-white text-[9px] xs:text-[11px] md:text-base'
           style={{
            

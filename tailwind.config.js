@@ -23,7 +23,10 @@ export default {
         'sm': '640px', // Default small breakpoint
         'md': '768px', // Default medium breakpoint
         'lg': '900px', // Default large breakpoint
-        // 'xl': '1280px', // Default extra-large breakpoint
+        'sxl': '1000px', // Default extra-large breakpoint
+        '1sxl': '1100px', // Default extra-large breakpoint
+        '2sxl': '1200px', // Default extra-large breakpoint
+        'xl': '1340px', // Default extra-large breakpoint
         // '2xl': '1536px', // Default 2xl breakpoint
         // Add your custom breakpoints here
       },

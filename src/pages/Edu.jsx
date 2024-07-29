@@ -75,7 +75,7 @@ export default function Edu() {
        <Hobbies showHobbies={showHobbies}/>
       )}
     {edu &&(
-       <Education showEdu={showEdu}/>
+       <Education showEdu={showEdu} />
       )}
     {pj &&(
        <Project showPj={showPj}/>

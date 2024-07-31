@@ -18,16 +18,17 @@ export default function Project({showPj}) {
   const [color2 ,setColor2] = useState(false);
   return (
     <>
-      <div className='p-2 ' >
+      <div className='p-1 py-2' >
 
-          <div className='backdrop-blur-sm rounded-lg px-4 py-2 flex justify-between items-center bg-[#204057] drop-shadow-md'>
-          <a href="https://github.com/Kaungsett45/Rublet" className=''>
-          <h4 className='text-xs m-1 text-center text-white'>Rublet</h4>
-          <video  src={rublet} autoPlay loop muted className='w-full rounded-lg'></video>
-          </a>
-          </div>
-      </div>
+        <a href="https://github.com/Kaungsett45/Rublet"  target="_blank" className='backdrop-blur-sm rounded-lg px-4 py-2 flex justify-between items-center  drop-shadow-2xl'>
+            <video src={rublet} autoPlay loop muted className='w-full rounded-lg' />
+            <h4 className='text-2xl tracking-widest font-extrabold font-monst m-1 text-center text-[#FF6F61] absolute inset-0 flex items-center justify-center'>
+                Rublet
+            </h4>
+        </a>
+          
     
+           </div>
         
    
       </>

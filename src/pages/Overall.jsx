@@ -28,7 +28,7 @@ export default function Overall() {
                 </div>
             <div className='flex justify-center m-4'>
                 <div className=' w-64 h-64 rounded-full border-2 border-[#1A8B9C] block md:hidden '>
-                            <img src={profile} alt="profile" className='w-full h-full rounded-full object-cover'/>
+                            <img src={profile} alt="profile" loading="lazy" className='w-full h-full rounded-full object-cover'/>
                 </div>
             </div>
 
@@ -54,12 +54,12 @@ export default function Overall() {
         {isMobile ? (
             <div className='flex justify-center items-center mx-8'>
               <div className='w-64 h-64 imgcontain '>
-                <img src={profile} alt="profile" className='w-full h-full rounded-full object-cover' />
+                <img src={profile} alt="profile" loading="lazy" className='w-full h-full rounded-full object-cover' />
               </div>
             </div>
           ) :(  
           <div className='w-64 h-64 hidden'>
-            <img src={profile} alt="profile" className='w-full h-full rounded-full object-cover' />
+            <img src={profile} alt="profile" loading="lazy" className='w-full h-full rounded-full object-cover' />
 
         </div>
         )}

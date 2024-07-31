@@ -21,7 +21,7 @@ export default function Project({showPj}) {
       <div className='p-1 py-2' >
 
         <a href="https://github.com/Kaungsett45/Rublet"  target="_blank" className='backdrop-blur-sm rounded-lg px-4 py-2 flex justify-between items-center  drop-shadow-2xl'>
-            <video src={rublet} autoPlay loop muted className='w-full rounded-lg' />
+            <video src={rublet} autoPlay loop muted preload="auto" className='w-full rounded-lg' />
             <h4 className='text-2xl tracking-widest font-extrabold font-monst m-1 text-center text-[#FF6F61] absolute inset-0 flex items-center justify-center'>
                 Rublet
             </h4>

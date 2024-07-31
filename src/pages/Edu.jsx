@@ -5,6 +5,7 @@ import Hobbies from '../component/Hobbies'
 import { useState } from 'react'
 import Education from '../component/Education'
 import Project from '../component/Project'
+import { Link } from 'react-router-dom'
 export default function Edu() {
 
   let [hobbies ,setHobbies] = useState(false);
@@ -41,7 +42,7 @@ export default function Edu() {
     </div>
   
     {/* Project */}
-    <button className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-3  flex justify-center items-center lg:text-lg'
+    <Link to ='/projects'className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-3  flex justify-center items-center lg:text-lg'
      onClick={showPj}
     style= {{
                    
@@ -56,7 +57,7 @@ export default function Edu() {
                     writingMode: 'vertical-lr',
                     color: '#FF6F61'
     }}>Project</h2>
-    </button>
+    </Link>
     {/* Hobbies */}
    
     <button  className='cursor-pointer text-white border-[#1A8B9C] border-4 rounded-lg  col-span-3 row-span-2 flex justify-center items-center lg:text-lg '

@@ -5,7 +5,7 @@ import {
 import App from "../App";
 import Intro from '../pages/Overall'
 import Blogs from "../Blogs/Blogs"
-import Hobbies from "../component/Hobbies";
+import Project from "../component/Project";
   
 
 
@@ -19,8 +19,11 @@ const router = createBrowserRouter(
             path: "/",
             element: <Intro/>,
            },{
-            path : "/Blog",
+            path : "/blog",
             element : <Blogs/>
+           },{
+            path : "/projects",
+            element : <Project/>
            }
          
       ]

@@ -27,7 +27,7 @@ export default function Overall() {
                     {/* <p className='text-xs leading-10'>I _M A K E _T H E _C O M P L E X _S I M P L E .</p> */}
                 </div>
             <div className='flex justify-center m-4'>
-                <div className=' w-64 h-64 rounded-full border-2 border-[#1A8B9C] block md:hidden '>
+                <div className=' w-64 h-64 rounded-full border-2  block md:hidden '>
                             <img src={profile} alt="profile" loading="lazy" className='w-full h-full rounded-full object-cover'/>
                 </div>
             </div>
@@ -45,7 +45,7 @@ export default function Overall() {
                 </div>
                 
 
-                <div className='relative border-[2px] border-transparent '>
+                <div className='relative border-[2px] border-transparent text-white'>
                       <Introparagraph/>
                 </div>
 

@@ -6,6 +6,7 @@ import { useState } from 'react'
 import Education from '../component/Education'
 import Project from '../component/Project'
 import { Link } from 'react-router-dom'
+import loadgif from '../../public/loading.gif'
 export default function Edu() {
 
   let [hobbies ,setHobbies] = useState(false);
@@ -38,7 +39,9 @@ export default function Edu() {
     </button>
     {/* Loading */}
     <div className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-2  flex justify-center items-center'>
-      <h2 className='text-base  font-extrabold  font-monst lg:text-lg'>Loading</h2>
+      <h2 className='text-base  font-extrabold  font-monst lg:text-lg'>
+        <img src={loadgif} alt="loading" className='w-24' loading="lazy"/>
+      </h2>
     </div>
   
     {/* Project */}
@@ -55,7 +58,7 @@ export default function Edu() {
       <h2  className='text-base  font-extrabold  font-monst '
       style={{ textOrientation: 'upright',
                     writingMode: 'vertical-lr',
-                    color: '#FF6F61'
+                    color: 'black'
     }}>Project</h2>
     </Link>
     {/* Hobbies */}

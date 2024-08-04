@@ -38,7 +38,7 @@ export default function Edu() {
         <h2 className='text-base  font-extrabold  font-monst lg:text-lg'>Education</h2>
     </button>
     {/* Loading */}
-    <div className='border-[#1A8B9C] border-4  rounded-lg col-span-2 row-span-2  flex justify-center items-center'>
+    <div className=' border-4  rounded-lg col-span-2 row-span-2  flex justify-center items-center'>
       <h2 className='text-base  font-extrabold  font-monst lg:text-lg'>
         <img src={loadgif} alt="loading" className='w-24' loading="lazy"/>
       </h2>

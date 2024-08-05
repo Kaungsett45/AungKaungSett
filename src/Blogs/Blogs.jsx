@@ -2,6 +2,7 @@ import React from 'react'
 
 import jsimg from '../../public/reactvirtual.svg'
 import view from '../../public/view.svg'
+import reuse from '../../public/Reusest.svg'
 import { Link } from 'react-router-dom'
 export default function Blogs() {
   return (
@@ -18,7 +19,7 @@ export default function Blogs() {
               </div>
         </div>
         <div className='mx-4 my-2 border-2  shadow-lg backdrop-blur-sm rounded-lg drop-shadow-2xl px-2 min-h-[26vh]'>
-              <img src={jsimg} alt="" className='my-2 w-full rounded-lg' />
+              <img src={reuse} alt="" className='my-2 w-full rounded-lg' />
                  
               <div className='flex items-center justify-between mx-2 my-1'>
                     <div className='flex items-center justify-center'>

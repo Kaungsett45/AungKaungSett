@@ -11,10 +11,7 @@ export default function Blogs() {
               <img src={jsimg} alt="" className='my-2 w-full rounded-lg' />
                  
               <div className='flex items-center justify-between mx-2 my-1'>
-                    <div className='flex '>
-                        <img src={view} alt="view" className='h-6 w-5' />
-                        <p>12</p>
-                    </div>
+                   <p className='font-mari text-xs'>6-Aug-24</p>
                   <Link to="" className='bg-[#1A8B9C] px-4 py-1 text-white rounded-full font-mari'>Read</Link>
               </div>
         </div>
@@ -22,10 +19,7 @@ export default function Blogs() {
               <img src={reuse} alt="" className='my-2 w-full rounded-lg' />
                  
               <div className='flex items-center justify-between mx-2 my-1'>
-                    <div className='flex items-center justify-center'>
-                        <img src={view} alt="view" className='h-6 w-5' />
-                        <p>12</p>
-                    </div>
+                  <p className='font-mari text-xs'>6-aug-24</p>  
                   <Link to="" className='bg-[#1A8B9C] px-4 py-1 text-white rounded-full font-mari'>Read</Link>
               </div>
         </div>

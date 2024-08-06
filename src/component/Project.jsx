@@ -3,12 +3,8 @@ import React , {useState } from 'react'
 
 import spring from '../../public/spring.svg'
 import java from '../../public/java.svg'
-import react from '../../public/react.svg'
 import css from '../../public/css.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import firebase from '../../public/firebase.svg'
-import tailwind from '../../public/tailwind.svg'
+import quizzi from '../../public/video/quzzi.mp4'
 import rublet from '../../public/video/Rublet.mp4'
 export default function Project({showPj}) {
   
@@ -29,7 +25,7 @@ export default function Project({showPj}) {
 
         </a>
         <a href="https://github.com/Kaungsett45/Rublet"  target="_blank" className=' my-1 backdrop-blur-sm rounded-lg px-4 py-2 flex justify-between items-center  drop-shadow-2xl'>
-            <video src={rublet} autoPlay loop muted preload="auto" className='w-full rounded-lg' />
+            <video src={quizzi} autoPlay loop muted preload="auto" className='w-full rounded-lg' />
             <h4 className='text-2xl  xs:text-4xl tracking-widest font-extrabold font-monst m-1 text-center text-[#FF6F61] absolute inset-0 flex items-center justify-center'>
                 Quizzi
             </h4>

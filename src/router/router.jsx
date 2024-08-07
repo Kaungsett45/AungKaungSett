@@ -6,6 +6,7 @@ import App from "../App";
 import Intro from '../pages/Overall'
 import Blogs from "../Blogs/Blogs"
 import Project from "../component/Project";
+import B1 from "../Blogs/Blogsch/B1";
   
 
 
@@ -24,6 +25,9 @@ const router = createBrowserRouter(
            },{
             path : "/projects",
             element : <Project/>
+           },{
+            path : "/blg-1",
+            element : <B1/>
            }
          
       ]

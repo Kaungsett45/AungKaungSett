@@ -5,37 +5,42 @@ import {
 import App from "../App";
 import Intro from '../pages/Overall'
 import Blogs from "../Blogs/Blogs"
+
 import Project from "../component/Project";
 import B1 from "../Blogs/Blogsch/B1";
-  
-
-
+import B2 from "../Blogs/Blogsch/B2";
 const router = createBrowserRouter(
-    [
+  [
     {
       path: "/",
-      element: <App/>,
-      children:[
-           {
-            path: "/",
-            element: <Intro/>,
-           },{
-            path : "/blog",
-            element : <Blogs/>
-           },{
-            path : "/projects",
-            element : <Project/>
-           },{
-            path : "/blg-1",
-            element : <B1/>
-           }
-         
-      ]
-    }
+      element: <App />,
+      children: [
+        {
+          path: "/",
+          element: <Intro />,
+        },
+        {
+          path: "/blog",
+          element: <Blogs />,
+        },
+        {
+          path: "/projects",
+          element: <Project />,
+        },
+        {
+          path: "/blg-1",
+          element: <B1 />,
+        },
+        {
+          path: "/blg-2",
+          element: <B2 />,
+        },
+      ],
+    },
   ],
   {
-    basename: '/AungKaungSett',  // Replace with your subdirectory path
+    basename: "/AungKaungSett", // Replace with your subdirectory path
   }
-  );
+);
 
   export default router;

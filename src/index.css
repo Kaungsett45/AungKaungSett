@@ -32,10 +32,9 @@
   border-radius: 15px;
   padding: 4px;
   margin: 6px;
-  
   }
   .card img{
-  width: 82px;
+  width: 72px;
   height: 70px;
   object-fit:contain;
   }

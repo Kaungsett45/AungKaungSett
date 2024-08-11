@@ -7,7 +7,7 @@ export default function B1() {
   return (
     <div>
        
-        <img src={jsimg} alt="" className='my-2 w-full rounded-lg px-4' />
+        <img src={jsimg} alt="virtual-dom" className='my-2 w-full rounded-lg px-4' />
     <div className='leading-relaxed text-left'>
         <p className='px-4'> Web app တွေ complex ဖြစ်လာလေ manage လုပ်ကတာ challenge တစ်ခုလိုဖြစ်လာပါတယ်။</p>
         <p className='px-4 my-2'>  ပိုefficient ဖြစ်အောင် manage ဖို့ အတွက် REACTမှာဆိုရင် <span className='font-bold text-[#FF6F61]'>Virtual DOM</span>ဆိုတဲ့ Javascript Library ကိုသုံးကြပါတယ်။
@@ -20,7 +20,7 @@ export default function B1() {
   
         </div>
 
-        <Link to="/blg-1" className='flex justify-center mx-2 my-3'><img src={arrow} alt="back"  className='bg-[#1A8B9C] px-4 py-1  rounded-full font-mari'/></Link>
+        <Link to="/blog" className='flex justify-center mx-2 my-3'><img src={arrow} alt="back"  className='bg-[#1A8B9C] px-4 py-1  rounded-full font-mari'/></Link>
          
     </div>
   )

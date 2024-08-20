@@ -13,6 +13,7 @@ export default function B1() {
       <img
         src={reuse}
         alt="virtual-dom"
+        loading="lazy"
         className="my-2 w-full rounded-lg px-4 "
       />
       <div className="leading-relaxed text-left">
@@ -51,13 +52,14 @@ export default function B1() {
           target="_blank"
           className="text-blue-500 flex justify-center font-bold my-4 px-4"
         >
-          ဤအကြောင်းအရာကို ပိုမိုသေချာနားလည်ရန် အောက်ပါလင့်ခ်ကို ကြည့်ပါ။{" "}
+          ဤအကြောင်းအရာကို ပိုမိုသေချာနားလည်ရန် လင့်ခ်ကို နှိပ်ပါ။{" "}
         </a>
       </div>
 
-      <Link to="/blog" className="flex justify-center mx-2 my-3">
+      <Link to="/blogs" className="flex justify-center mx-2 my-3">
         <img
           src={arrow}
+          loading="lazy"
           alt="back"
           className="bg-[#1A8B9C] px-4 py-1  rounded-full font-mari"
         />

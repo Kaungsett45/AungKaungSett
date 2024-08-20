@@ -9,6 +9,8 @@ import Blogs from "../Blogs/Blogs"
 import Project from "../component/Project";
 import B1 from "../Blogs/Blogsch/B1";
 import B2 from "../Blogs/Blogsch/B2";
+import B3 from "../Blogs/Blogsch/B3";
+
 const router = createBrowserRouter(
   [
     {
@@ -20,21 +22,29 @@ const router = createBrowserRouter(
           element: <Intro />,
         },
         {
-          path: "/blog",
-          element: <Blogs />,
-        },
-        {
           path: "/projects",
           element: <Project />,
         },
         {
-          path: "/blg-1",
-          element: <B1 />,
+          path: "blogs",
+          element: <Blogs />,
         },
-        {
-          path: "/blg-2",
-          element: <B2 />,
-        },
+            {
+              path: "blogs/blog-1",
+              element: <B1 />,
+            },
+            {
+              path: "blogs/blog-2",
+              element: <B2 />,
+            },
+            {
+              path: "blogs/blog-3",
+              element: <B3 />,
+            }
+
+          
+       
+       
       ],
     },
   ],

@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import-normalize;
 
+
 :root {
   --btn-color :#1A8B9C;
   --border-color: #204057;
@@ -28,14 +29,14 @@
   }
   
   .card {
-  border: 4px solid black;
+    border:4px solid black;
   border-radius: 15px;
   padding: 4px;
   margin: 6px;
   }
   .card img{
-  width: 72px;
-  height: 70px;
+  width: 62px;
+  height: 60px;
   object-fit:contain;
   }
   html, body {
@@ -71,8 +72,7 @@
     }
     
     .card {
-    border: 4px solid black;
-    border-radius: 15px;
+     border-radius: 15px;
     padding: 4px;
     margin: 6px;
     
@@ -107,7 +107,6 @@
     }
     
     .card {
-    border: 4px solid black;
     border-radius: 15px;
     padding: 4px;
     margin: 6px;
@@ -142,8 +141,8 @@
       
       }
       .card img{
-      width: 88px;
-      height: 88px;
+      width: 82px;
+      height: 82px;
       object-fit:contain;
       }
 }

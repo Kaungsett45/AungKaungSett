@@ -30,6 +30,26 @@ export default {
         // '2xl': '1536px', // Default 2xl breakpoint
         // Add your custom breakpoints here
       },
+      animation: {
+        'text-slide': 'text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite',
+    },
+    keyframes: {
+        'text-slide': {
+            '0%, 25%': {
+                transform: 'translateY(0%)',
+            }, 
+            '31.25%, 56.25%': {
+              transform: 'translateY(-25%)',
+          },
+            '62.5%, 87.5%': {
+              transform: 'translateY(-50%)',
+          },
+            '100%': {
+              transform: 'translateY(-75%)',
+          },
+          
+        },       
+      },
     },
   },
   plugins: [],

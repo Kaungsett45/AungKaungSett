@@ -23,7 +23,16 @@ export default function Overall() {
                 <div className=''>
 
                     <p className='text-xl font-monst font-bold leading-8 xs:text-lg md:text-2xl'>Hello 👋 !</p>
-                    <p className='text-sm font-monst font-bold ml-4 leading-8 xs:text-base md:text-lg'> I AM <span className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT..</span></p>
+                    <div className='flex text-sm font-monst font-bold ml-4 leading-8 xs:text-base md:text-lg '> I AM 
+                     <div className='h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] overflow-hidden'>
+                      <ul className='animate-text-slide leading-tight '>
+                      <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT....</li>
+                      <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>Web Developer....</li>
+                      <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>React Developer....</li>
+                      <li aria-hidden="true" className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT....</li>
+                    </ul>
+                    </div>
+                    </div>
                     {/* <p className='text-xs leading-10'>I _M A K E _T H E _C O M P L E X _S I M P L E .</p> */}
                 </div>
             <div className='flex justify-center m-4'>

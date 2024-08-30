@@ -1,32 +1,39 @@
 import React from 'react'
+import AnimatedConent from './Nav.jsx'
 import star from '../../public/star.svg'
 import profile from '../../public/profile.jpg'
 import Introparagraph from './Introparagraph';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-
+import AnimatedContent from '../component/AnimatedContent.jsx'
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom'
 import Skillset from './Skillset';
+import Project from '../component/Project.jsx';
 import Edu from './Edu';
+import Experience from '../component/Experience.jsx';
+
+
 export default function Overall() {
+
+  
 
   const isMobile = useMediaQuery({ minWidth: 768 });
  
   return (
     <>
+  <AnimatedContent>
     <div className='px-2 py-1 relative flex justify-between  my-4 '>
-
          <div className='md:max-w-[420px]'>  
          
                  <img src={star}alt="Star" className='absolute right-3 w-4'/>
                 <div className=''>
 
                     <p className='text-xl font-monst font-bold leading-8 xs:text-lg md:text-2xl'>Hello 👋 !</p>
-                    <div className='flex text-sm font-monst font-bold ml-4 leading-8 xs:text-base md:text-lg '> I AM 
+                    <div className='flex text-sm font-monst font-bold ml-4 leading-6 xs:text-base md:text-lg '> I AM 
                      <div className='h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] overflow-hidden'>
                       <ul className='animate-text-slide leading-tight '>
-                      <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT....</li>
+                      <li className=' mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT....</li>
                       <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>Web Developer....</li>
                       <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>React Developer....</li>
                       <li aria-hidden="true" className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT....</li>
@@ -76,12 +83,20 @@ export default function Overall() {
 
         </div>
        
+  </AnimatedContent>
 
-        <div className='md:flex md:justify-between'>
+        <div className=''>
+              <AnimatedContent>
                     <Skillset/>
-                    <Edu/>
-                 </div>
- 
+              </AnimatedContent>
+              <AnimatedContent>
+                    <Experience/>
+              </AnimatedContent>
+        </div>
+       
+              <AnimatedContent>
+                    <Project/>
+              </AnimatedContent>
 
          
 

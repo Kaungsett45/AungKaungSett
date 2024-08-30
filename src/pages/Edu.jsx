@@ -7,6 +7,7 @@ import Education from '../component/Education'
 import Project from '../component/Project'
 import { Link } from 'react-router-dom'
 import loadgif from '../../public/loading.gif'
+import AnimatedContent from '../component/AnimatedContent'
 export default function Edu() {
 
   let [hobbies ,setHobbies] = useState(false);
@@ -26,6 +27,7 @@ export default function Edu() {
   return (
 
 <>
+  <AnimatedContent>
     <div className='edures grid grid-cols-5 grid-rows-5 gap-4 p-4 min-h-[330px] md:min-w-[350px] lg:min-w-[400px]'>
     {/* Education */}
     <button className='border-[#1A8B9C] border-4 rounded-lg col-span-3 row-span-3 flex flex-col justify-center items-center'
@@ -74,9 +76,9 @@ export default function Edu() {
       <h2 className='text-base  font-extrabold  font-monst'>Hobbies</h2>
     </button>
   </div>
-
+  </AnimatedContent>
     {hobbies &&(
-       <Hobbies showHobbies={showHobbies}/>
+      <Hobbies showHobbies={showHobbies}/>
       )}
     {edu &&(
        <Education showEdu={showEdu} />

@@ -2,8 +2,10 @@ import star from '../../public/star.svg'
 import { Outlet ,NavLink } from 'react-router-dom'
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
+
 export default function Navigation(){
 
+   
 
     return(
         <>
@@ -32,8 +34,10 @@ export default function Navigation(){
 
             
         </nav>
-        
-        <Outlet/>
+
+       
+          <Outlet/>
+     
         </>
     )
 }

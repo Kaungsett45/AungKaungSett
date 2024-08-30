@@ -14,6 +14,15 @@ export default function Project({showPj}) {
   
   return (
     <>
+        <div>
+        <h1
+      className=" mx-1 text-center font-rale font-extrabold tracking-wide text-lg xs:text-x lg:text-2xl"
+      style={{ color: '#FFDAB9', zIndex: 10 }}
+    >
+      PROJECTS
+    </h1>
+        </div>
+
       <div className='p-1 py-2 grid grid-cols-1  my-4 sm:px-4 md:grid-cols-2 ' >
 
         <a href="https://github.com/Kaungsett45/Rublet"  target="_blank" className='my-1 backdrop-blur-sm rounded-lg px-4 py-2 flex flex-col justify-between items-center  drop-shadow-2xl '>

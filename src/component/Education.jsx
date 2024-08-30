@@ -6,8 +6,8 @@ import camera from '../../public/camera.svg'
 export default function Education({showEdu}) {
   return (
     
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4 lg:p-12 xl:px-[160px] overflow-y-auto">
-    <div className="bg-white rounded-lg shadow-lg max-h-[90vh] w-full xss:w-4/4  overflow-y-auto">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4 lg:p-12 xl:px-[160px] overflow-y-auto z-50">
+    <div className="bg-white rounded-lg shadow-lg max-h-[90vh] w-full xss:w-4/4 overflow-y-auto z-40">
           <div className=' rounded-t-lg rounded-tr-lg px-4 py-2 flex justify-between items-center bg-[#204057] overflow-y-auto'>  
                     <h2 className='text-[#FF6F61] text-base  font-extrabold  font-monst lg:text-2xl'>Education</h2>
                     <button className='w-10' onClick={showEdu}><img src={cross} alt="" /></button>

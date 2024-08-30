@@ -48,9 +48,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  {
-    basename: "/AungKaungSett", // Replace with your subdirectory path
-  }
+ 
 );
 
   export default router;

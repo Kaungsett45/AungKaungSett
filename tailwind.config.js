@@ -31,7 +31,7 @@ export default {
         // Add your custom breakpoints here
       },
       animation: {
-        'text-slide': 'text-slide 12.5s cubic-bezier(0.83, 0, 0.17, 1) infinite',
+        'text-slide': 'text-slide 12s cubic-bezier(0.63, 0, 0.17, 1) infinite',
     },
     keyframes: {
         'text-slide': {

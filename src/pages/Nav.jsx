@@ -28,7 +28,7 @@ export default function Navigation(){
                 text-sm font-roboto font-bold text-white  py-1 px-2 rounded-full border-4 border-[#204057] xs:border-6 xs:px-4
                 sm:border-7 sm:px-6 sm:text-lg
                 '
-                 style={{ backgroundColor: '#1A8B9C' }}
+                 style={{ backgroundColor: '#204057' }}
                 >RESUME</button></Link>
             </div>
 

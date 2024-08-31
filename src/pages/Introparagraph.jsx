@@ -69,11 +69,11 @@ export default function Introparagraph() {
         )}
 
         <div className="flex justify-end">
-          <button
+          <button aria-label="first-pg"
             className={` w-4 h-4 mx-1 rounded-full  ${first ? 'bg-[#FF6F61]' : 'bg-white'}`}
             onClick={ShowFirst}
           ></button>
-          <button
+          <button aria-label="second-pg"
             className={` w-4 h-4 mx-1 rounded-full  ${second ? 'bg-[#FF6F61]' : 'bg-white'}`}
             onClick={ShowSecond}
           ></button>

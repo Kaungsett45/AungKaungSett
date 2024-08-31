@@ -23,18 +23,18 @@ export default function Footer() {
     >CONTACT</h2>
     <div className='px-3 flex  justify-between space-x-3 xss:p-4 xs:px-5 xs:py-2 xl:px-[260px] sxl:px-[60px] 1sxl:px-[100px]  2sxl:px-[160px]'>
       <div className='flex space-x-3'>
-     <Link to="https://www.linkedin.com/in/aung-kaung-sett-4244b721a/" target="_blank">
-              <button className='flex items-center   rounded-full p-1 bg-white  text-white  text-base font-monst md:text-lg lg:border-4'>
+     <Link to="https://www.linkedin.com/in/aung-kaung-sett-4244b721a/" target="_blank" aria-label="Linkedin Link">
+              <button aria-label="Linkedin"className='flex items-center   rounded-full p-1 bg-white  text-white  text-base font-monst md:text-lg lg:border-4'>
                   <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0077B5',text:' white' }} className='mx-1 w-4 h-6  lg:w-6 lg:h-8'/> 
               </button>
      </Link>
-     <Link to="https://www.instagram.com/rezzwxx?igsh=MTUydHVteXR4dTNxeQ==" target="_blank">
-              <button className='flex items-center   rounded-full p-1  bg-white text-white  text-base font-monst md:text-lg lg:border-4'>
+     <Link to="https://www.instagram.com/rezzwxx?igsh=MTUydHVteXR4dTNxeQ==" target="_blank" aria-label="Instagram Link">
+              <button aria-label="Instagram " className='flex items-center   rounded-full p-1  bg-white text-white  text-base font-monst md:text-lg lg:border-4'>
                   <FontAwesomeIcon icon={faInstagram} className='mx-1 w-4 h-6  lg:w-6 lg:h-8' style={{ color: '#E4405F' }}/> 
               </button>
      </Link>
-     <Link to="https://x.com/kau72149604?t=dMxfO8wj87LVzlq5ezcEZA&s=09" target="_blank">
-              <button className='flex items-center bg-white rounded-full p-1   text-white  text-base font-monst md:text-lg lg:border-4'>
+     <Link to="https://x.com/kau72149604?t=dMxfO8wj87LVzlq5ezcEZA&s=09" target="_blank" aria-label="Twitter Link">
+              <button aria-label="Twitter"className='flex items-center bg-white rounded-full p-1   text-white  text-base font-monst md:text-lg lg:border-4'>
                   <FontAwesomeIcon icon={faTwitter} className='mx-1 w-4 h-6  lg:w-6 lg:h-8' style={{ color: '#1DA1F2' }} /> 
               </button>
      </Link>

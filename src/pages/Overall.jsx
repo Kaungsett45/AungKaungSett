@@ -52,7 +52,7 @@ export default function Overall() {
 
                 <hr className="border-2 border-[#1A8B9C] my-2 w-full xs:w-38 sm:w-40"/>
                 <Link to="https://github.com/Kaungsett45" target="_blank">
-                <button className='flex items-center font-monst font-bold  mx-2 py-2 px-4 border-2 shadow-lg border-[#1A8B9C] rounded-[6px] p-4 text-sm xs:text-base md:text-lg'>
+                <button className='flex items-center font-monst font-bold  mx-2 py-3 px-6 border-2 shadow-lg border-[#1A8B9C] rounded-[6px] p-4 text-sm xs:text-base md:text-lg'>
                   <FontAwesomeIcon icon={faGithub} className='mx-1 w-6 h-6 xs:w-7 xs:h-7 md:w-8 md:h-8'/>Github
                 </button>
                 </Link>

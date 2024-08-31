@@ -89,8 +89,8 @@ export default function Project({showPj  }) {
                                         <img src={css} alt="react" className='w-6 h-5  sm:w-8 sm:h-8 md:w-6 md:h-6' />
                                     </div>
                                     <div className='flex items-center justify-between'>
-                                        <Link to="https://github.com/Kaungsett45/QuzziSystem" target="_blank">
-                                        <button className='flex items-center font-monst font-bold m-1  border-2 shadow-lg bg-[#1A8B9C] border-[#1A8B9C] rounded-full text-sm xs:text-base md:text-lg'>
+                                        <Link to="https://github.com/Kaungsett45/QuzziSystem" target="_blank" aria-label="Github Link">
+                                        <button aria-label="github" className='flex items-center font-monst font-bold m-1  border-2 shadow-lg bg-[#1A8B9C] border-[#1A8B9C] rounded-full text-sm xs:text-base md:text-lg'>
                                         <FontAwesomeIcon icon={faGithub} className='text-white mx-1 my-1 w-6 h-6 sm:w-9 sm:h-9 xs:w-7 xs:h-7 md:w-8 md:h-8'/>
                                         </button>
                                         </Link>
@@ -116,8 +116,8 @@ export default function Project({showPj  }) {
                 <img src={css} alt="react" className='w-6 h-5  sm:w-8 sm:h-8 md:w-6 md:h-6' />
                                     </div>
                                     <div className='flex items-center justify-between'>
-                                        <Link to="https://github.com/Kaungsett45/Rublet" target="_blank">
-                                        <button className='flex items-center font-monst font-bold m-1  border-2 shadow-lg bg-[#1A8B9C] border-[#1A8B9C] rounded-full text-sm xs:text-base md:text-lg'>
+                                        <Link to="https://github.com/Kaungsett45/Rublet" target="_blank" aria-label="Github Link">
+                                        <button aria-label="github" className='flex items-center font-monst font-bold m-1  border-2 shadow-lg bg-[#1A8B9C] border-[#1A8B9C] rounded-full text-sm xs:text-base md:text-lg'>
                                         <FontAwesomeIcon icon={faGithub} className='text-white mx-1 my-1 w-6 h-6 xs:w-7 sm:w-9 sm:h-9 xs:h-7 md:w-8 md:h-8'/>
                                         </button>
                                         </Link>
@@ -142,8 +142,8 @@ export default function Project({showPj  }) {
                                             <img src={tailwind} alt="tailwind" className='w-6 h-5  sm:w-8 sm:h-8 md:w-6 md:h-6' />
                                     </div>
                                     <div className='flex items-center justify-between'>
-                                        <Link to="https://github.com/Kaungsett45/quotegenerator" target="_blank">
-                                        <button className='flex items-center font-monst font-bold m-1  border-2 shadow-lg bg-[#1A8B9C] border-[#1A8B9C] rounded-full text-sm xs:text-base md:text-lg'>
+                                        <Link to="https://github.com/Kaungsett45/quotegenerator" target="_blank" aria-label="Github Link">
+                                        <button  aria-label="github" className='flex items-center font-monst font-bold m-1  border-2 shadow-lg bg-[#1A8B9C] border-[#1A8B9C] rounded-full text-sm xs:text-base md:text-lg'>
                                         <FontAwesomeIcon icon={faGithub} className='text-white mx-1 my-1  w-6 h-6 xs:w-7 xs:h-7 sm:w-9 sm:h-9 md:w-8 md:h-8'/>
                                         </button>
                                         </Link>

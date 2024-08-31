@@ -27,8 +27,8 @@ export default function Experience() {
          Ready for new challenges and full-time opportunities </p>
     </div>
     <hr className='w-6 h-1 sm:w-12 sm:h-2 md:w-12 bg-[#204057] border-0'></hr>
-    <div className='w-24  h-10 xss:w-24 xs:w-32 xs:h-12 sm:w-36 sm:h-18 md:h-20 border-4 border-[#204057] rounded-full flex items-center justify-center overflow-hidden'>
-         <img src={react} alt="react" className='w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 object-fit' />
+    <div className='w-24  h-10 xss:w-24 xs:w-32 xs:h-12  sm:h-18 md:h-20 sm:h-18 sm:w-24 md:w-32 md:h-18 lg:w-28 lg:h-18 border-4 border-[#204057] rounded-full flex items-center justify-center overflow-hidden'>
+         <img src={react} alt="react" className='w-4 h-6 sm:w-6 sm:h-8 md:w-10 md:h-12 object-fit' />
     </div>
   
 

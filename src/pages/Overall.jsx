@@ -34,7 +34,7 @@ export default function Overall() {
                      <div className='h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] overflow-hidden'>
                       <ul className='animate-text-slide leading-tight '>
                       <li className=' mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT....</li>
-                      <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>Web Developer....</li>
+                      <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>Full-stack Developer....</li>
                       <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>React Developer....</li>
                       <li aria-hidden="true" className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT....</li>
                     </ul>

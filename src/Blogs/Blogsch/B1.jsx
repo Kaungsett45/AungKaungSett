@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import jsimg from '../../../public/reactvirtual.svg'
 import arrow from '../../../public/arrow.svg'
+
 export default function B1() {
   return (
     <div>

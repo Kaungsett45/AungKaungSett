@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import arrow from '../../../public/arrow.svg';
 import reuse from "../../../public/Reusest.svg";
 import usecount from "../../../public/usecount.svg";
-
 import b2ex from "../../../public/b2ex.svg";
 
 export default function B1() {

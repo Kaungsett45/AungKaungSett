@@ -1,5 +1,4 @@
 import React from 'react'
-import AnimatedConent from './Nav.jsx'
 import star from '../../public/star.svg'
 import profile from '../../public/profile.jpg'
 import Introparagraph from './Introparagraph';
@@ -10,7 +9,6 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom'
 import Skillset from './Skillset';
 import Project from '../component/Project.jsx';
-import Edu from './Edu';
 import Experience from '../component/Experience.jsx';
 
 
@@ -44,7 +42,7 @@ export default function Overall() {
                 </div>
             <div className='flex justify-center m-4'>
                 <div className=' w-64 h-64 rounded-full border-2  block md:hidden '>
-                            <img src={profile} alt="profile" loading="lazy" className='w-full h-full rounded-full object-cover'/>
+                            <img src={profile} alt="profile"  className='w-full h-full rounded-full object-cover'/>
                 </div>
             </div>
 
@@ -70,12 +68,12 @@ export default function Overall() {
         {isMobile ? (
             <div className='flex justify-center items-center mx-8'>
               <div className='w-64 h-64 imgcontain '>
-                <img src={profile} alt="profile" loading="lazy" className='w-full h-full rounded-full object-cover' />
+                <img src={profile} alt="profile"  className='w-full h-full rounded-full object-cover' />
               </div>
             </div>
           ) :(  
           <div className='w-64 h-64 hidden'>
-            <img src={profile} alt="profile" loading="lazy" className='w-full h-full rounded-full object-cover' />
+            <img src={profile} alt="profile" className='w-full h-full rounded-full object-cover' />
 
         </div>
         )}

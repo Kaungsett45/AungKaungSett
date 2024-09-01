@@ -48,7 +48,7 @@ export default function SplashScreen(WrappedComponent) {
           this.setState({
             loading: false,
           });
-        }, 3000);
+        }, 2000);
       } catch (err) {
         console.log(err);
         this.setState({

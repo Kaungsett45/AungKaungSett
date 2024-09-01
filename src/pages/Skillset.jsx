@@ -13,8 +13,6 @@ import node from '../../public/node.svg'
 import firebase from '../../public/firebase.svg'
 import React, { useState } from 'react';
 export default function Middlepage(){
-    const [color ,setColor] = useState(true);
-    const [color2 ,setColor2] = useState(false);
     const [images, setImages] = useState([
       
         { id: 1, src: html, alt: 'HTML' },

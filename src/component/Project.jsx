@@ -1,4 +1,4 @@
-import React , {useState ,useRef } from 'react'
+import React , {useRef } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -38,11 +38,11 @@ export default function Project({showPj  }) {
       const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 2100,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 5000,
         arrows: false, 
       };
     

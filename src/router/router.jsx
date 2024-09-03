@@ -13,14 +13,13 @@ import B3 from "../Blogs/Blogsch/B3";
 const router = createBrowserRouter(
   [
     {
-      path: "/",
+      path: "",
       element: <App />,
       children: [
         {
           path: "/",
           element: <Intro />,
         },
-       
         {
           path: "blogs",
           element: <Blogs />,

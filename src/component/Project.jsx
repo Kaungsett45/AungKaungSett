@@ -98,13 +98,13 @@ export default function Project({showPj  }) {
         className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg z-10 flex items-center justify-center"
         onClick={prevSlide}
         >
-        <img src={left} alt="Previous" className="w-6 h-6" />
+        <img src={left} alt="Previous" className="w-6 h-6" loading="lazy" />
         </button>
       <button
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg z-10 flex items-center justify-center"
         onClick={nextSlide}
         >
-        <img src={right} alt="Previous" className="w-6 h-6" />
+        <img src={right} alt="Previous"  loading="lazy" className="w-6 h-6" />
         </button>
      
     </div>

@@ -9,9 +9,16 @@ import Project from "../component/Project";
 import B1 from "../Blogs/Blogsch/B1";
 import B2 from "../Blogs/Blogsch/B2";
 import B3 from "../Blogs/Blogsch/B3";
+import Error from "../component/Error";
 
 const router = createBrowserRouter(
   [
+      
+    {
+          path: "*",
+          element:<Error/>
+     }
+    ,
     {
       path: "",
       element: <App />,
@@ -35,7 +42,8 @@ const router = createBrowserRouter(
             {
               path: "blogs/blog-3",
               element: <B3 />,
-            }
+            },
+            
 
           
        

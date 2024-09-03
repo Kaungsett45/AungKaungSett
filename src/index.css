@@ -20,6 +20,21 @@
   padding-right: env(safe-area-inset-right);
   
 }
+.animated-image {
+  width: 100px; /* Adjust the size of your image */
+  position: relative;
+  animation: moveBackAndForth 3s infinite alternate ease-in-out;
+}
+
+
+@keyframes moveBackAndForth {
+  0% {
+    left: 0;
+  }
+ 100% {
+    left: calc(40% - 100px); /* Adjust the calculation based on your image size */
+  }
+}
 
 @keyframes moveRight {
   0% {

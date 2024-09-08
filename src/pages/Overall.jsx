@@ -33,7 +33,7 @@ export default function Overall() {
                       <ul className='animate-text-slide leading-tight '>
                       <li className=' mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT....</li>
                       <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>Full-stack Developer....</li>
-                      <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>React Developer....</li>
+                      <li className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>UI/UX Designer....</li>
                       <li aria-hidden="true" className='mx-2 text-base font-monst xs:text-lg md:text-xl'  style={{ color: '#1A8B9C' }}>AUNG KAUNG SETT....</li>
                     </ul>
                     </div>

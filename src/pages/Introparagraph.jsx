@@ -52,17 +52,16 @@ export default function Introparagraph() {
           <>
            <div className='xl:h-[260px]'>
             <p className="leading-5 pb-3">
-              In 2024, my interest shifted towards frameworks, leading me to
-              explore React. I became fascinated with JavaScript and decided to
-              pursue a career as a React developer.
+            In 2024, my focus shifted towards frameworks, especially React.
+             I became captivated by its potential and decided to pursue a career.
             </p>
             <p className="leading-5 pb-3">
-              Currently, I am deepening my skills in this area, learning
-              everything related to React development.
+            Currently, I'm deepening my expertise in React, exploring all aspects of development with it,
+             while also nurturing my interest in UI/UX design.
             </p>
             <p className="leading-5 pb-2">
-              Explore my portfolio to see my projects and recent work with
-              React, JavaScript, Node.js, and Java.
+            Explore my portfolio to see my projects and recent work with React, 
+            Node.js,and my evolving UI/UX design skills.
             </p>
             </div>
           </>

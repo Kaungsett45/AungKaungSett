@@ -1,9 +1,9 @@
-import React , {useRef } from 'react'
+import React , {useRef ,useState} from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import arrow from '../../public/rgarrow.svg'
-
+import loading from '/loading.svg'
 import { Link } from 'react-router-dom'
 
 import right from '/right.svg'
@@ -12,7 +12,11 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 export default function Project({showPj  }) {
-  
+  const [isloading , setisloading] = useState(true);
+
+  const handleimageload =() =>{
+    setisloading(false);
+  }
     const carouselItems = [
         { id: 1, title: 'Rublet', image: '/moviemockup.svg' ,
         language_1: '/java.svg' ,language_2: '/css.svg' ,language_3: '/spring.svg' ,
@@ -71,9 +75,22 @@ export default function Project({showPj  }) {
              <div>
                  <h2 className="text-lg   xs:text-2xl tracking-widest font-extrabold font-monst m-1 text-left text-[#FF6F61]">{item.title}</h2>
              </div>
-             <div className='flex justify-center   '>
-                   <img src={item.image} alt="mockup"  className='h-38 xss:h-34 md:h-42' />
-             </div>
+              {isloading &&(
+                  <div
+                  className="h-[220px] flex flex-col items-center justify-center border-2 border-red-500"
+                >
+                  {/* Optionally add a spinner or text */}
+                  <img src={loading} alt="loading..."
+                   className='w-24 h-38 xss:h-34 md:h-42' />
+                   <p>Loading...</p>
+                </div>
+              )}
+              <div className='flex justify-center   '>
+                 <img src={item.image} alt="mockup"
+                 onLoad={handleimageload}
+                 style={isloading ? { visibility: 'hidden' } : {}}
+                 className='h-38 xss:h-34 md:h-42' />
+              </div>
         <div>
              <div className='flex items-center justify-between '>
                      <div className='flex  items-center space-x-2 my-1 border-2 border-[#1A8B9C] rounded-full p-1 sm:p-2'>

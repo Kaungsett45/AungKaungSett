@@ -21,7 +21,7 @@ export default function Experience() {
         style={{ backgroundColor: "#204057", color: "white" }}
       >
          <p className="leading-5 pb-3">
-         Full-stack developer with React, Next.js, Java, Tailwind, Node.js, and Firebase skills. Some experience with React projects.
+         Full-stack developer with React, Java, Tailwind, Node.js, and Firebase skills. Some experience with React projects.
          </p>
          <p className="leading-5 pb-3">
          Ready for new challenges and full-time opportunities </p>

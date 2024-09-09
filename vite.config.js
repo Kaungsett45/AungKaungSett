@@ -8,5 +8,6 @@ export default defineConfig({
   base: "./",
   build: {
     minify: 'terser',
+    chunkSizeWarningLimit: 550,
   },
 });

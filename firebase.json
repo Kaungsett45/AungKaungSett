@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site":"kaungsett",
+    "site": "aungkaungsett",
     "public": "dist",
     "ignore": [
       "firebase.json",

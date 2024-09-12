@@ -77,7 +77,7 @@ export default function Project({showPj  }) {
              </div>
               {isloading &&(
                   <div
-                  className="h-[220px] flex flex-col items-center justify-center border-2 border-red-500"
+                  className="h-[220px] flex flex-col items-center justify-center "
                 >
                   {/* Optionally add a spinner or text */}
                   <img src={loading} alt="loading..."

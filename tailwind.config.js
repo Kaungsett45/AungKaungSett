@@ -34,22 +34,22 @@ export default {
         'text-slide': 'text-slide 12s cubic-bezier(0.63, 0, 0.17, 1) infinite',
     },
     keyframes: {
-        'text-slide': {
-            '0%, 25%': {
-                transform: 'translateY(0%)',
-            }, 
-            '31.25%, 56.25%': {
-              transform: 'translateY(-25%)',
-          },
-            '62.5%, 87.5%': {
-              transform: 'translateY(-50%)',
-          },
-            '100%': {
-              transform: 'translateY(-75%)',
-          },
-          
-        },       
+      'text-slide': {
+        '0%, 20%': {
+          transform: 'translateY(0%)',
+        },
+        '25%, 45%': {
+          transform: 'translateY(-33.33%)',
+        },
+        '50%, 70%': {
+          transform: 'translateY(-66.66%)',
+        },
+        '75%, 100%': {
+          transform: 'translateY(-100%)',
+        },
       },
+    },
+    
     },
   },
   plugins: [],

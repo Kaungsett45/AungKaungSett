@@ -35,20 +35,18 @@ export default {
     },
     keyframes: {
       'text-slide': {
-        '0%, 20%': {
+        '0%, 33%': {
           transform: 'translateY(0%)',
         },
-        '25%, 45%': {
+        '55%, 88%': {
           transform: 'translateY(-33.33%)',
         },
-        '50%, 70%': {
-          transform: 'translateY(-66.66%)',
-        },
-        '75%, 100%': {
-          transform: 'translateY(-100%)',
+        '100%': {
+            transform: 'translateY(-63.33%)',
         },
       },
     },
+    
     
     },
   },

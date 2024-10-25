@@ -114,9 +114,9 @@ export default function Overall() {
         </AnimatedContent>
       </div>
 
-      <AnimatedContent>
+      {/* <AnimatedContent>
         <Project />
-      </AnimatedContent>
+      </AnimatedContent> */}
     </>
   );
 }

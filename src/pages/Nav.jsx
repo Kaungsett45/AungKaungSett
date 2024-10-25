@@ -11,15 +11,15 @@ export default function Navigation(){
         <>
         <nav className="px-2 py-1 relative flex justify-between items-center items-align ">
         <motion.div
-  initial={{ scale: 0 }}
-  animate={{ rotate: 360, scale: 1 }}
-  transition={{
-    type: "spring",
-    stiffness: 260,
-    damping: 20
-  }}
->
-            <h2 ><NavLink to="/" className='text-base font-roboto font-bold rounded-full  bg-[#204057] text-white py-1 px-3 xs:text-xl sm:text-2xl'>AKS</NavLink></h2>
+      initial={{ opacity: 0, y: -50 }} // Start hidden and above the final position
+      animate={{ opacity: 1, y: 0 }} // Fade in and move to its final position
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+    >
+            <h2 ><NavLink to="/" className='text-base font-roboto font-extrabold rounded-full  tracking-wide  text-[#204057] py-1 px-3 xs:text-xl sm:text-2xl'>PORTFOLIO</NavLink></h2>
     </motion.div>
             <div className=' flex  items-center items-align'>
                 <p className='mx-4 font-bold font-roboto text-lg xs:text-xl sm:mx-8 '><NavLink to="/blogs">Blogs</NavLink></p>

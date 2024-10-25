@@ -57,7 +57,7 @@ export default function Experience() {
               <p className="text-4xsl "
                style={{ color: "#B7B7B7" }}>
               Web Developer </p>
-              <p className="mt-2 leading-5 pb-3">
+              <p className="mt-2  text-xsl text-left">
               Full-stack developer with React, Java, Tailwind, Node.js, and Firebase skills. I’ve worked on multiple freelance projects and am now seeking new challenges
               </p>
                </div>

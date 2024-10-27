@@ -51,7 +51,7 @@ export default function Footer() {
                   </button>
                   {/* <hr className="border-1 border-white my-1  "/> */}
                   <button className='flex justify-between text-sm xs:text-base lg:text-lg'>
-                      <FontAwesomeIcon icon={faPhone} className='mx-2 w-4 h-4 xs:w-6 xs:h-6 lg:w-7 lg:h-6'/> +95  9768740871
+                      <FontAwesomeIcon icon={faPhone} className='mx-2 w-4 h-4 xs:w-6 xs:h-6 lg:w-7 lg:h-6'/> +95 9663174880
                   </button>
                   <button className='flex justify-between text-sm xs:text-base lg:text-lg'>
                       <FontAwesomeIcon icon={faLocation} className='mx-2 w-4 h-4 xs:w-6 xs:h-6 lg:w-7 lg:h-6'/> Kyimyindaing Township ,Yangon

@@ -3,6 +3,9 @@
 @tailwind utilities;
 @import-normalize;
 
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --btn-color :#1A8B9C;

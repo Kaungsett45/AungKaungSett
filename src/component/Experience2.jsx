@@ -1,8 +1,6 @@
 import React from 'react'
 
-import react from '../../public/react.svg'
 import codemal from '../../public/codemal.svg'
-import whitestar from '../../public/whitestar.svg'
 export default function Experience2() {
   return (
 
@@ -25,7 +23,7 @@ export default function Experience2() {
                dark:shadow-[0_0_6px_rgba(26,139,156,0.4)] dark:hover:shadow-[0_0_10px_rgba(26,139,156,0.6)]
                  "> 
                <ul className='lg:ml-6 ml-4 list-disc md:text-lg lg:text-xl xss:text-xs   xs:text-sm'>
-                    <li > Wrote technical content and guides for developers as content writer .</li>
+                    <li >Wrote technical content and guides for developers as content writer .</li>
                     <li>Developed UI components and improved user experience for nonprofit websites.</li>
                 </ul>
                 </div>

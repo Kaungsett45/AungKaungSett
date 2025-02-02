@@ -8,8 +8,6 @@ import AnimatedContent from "../component/AnimatedContent.jsx";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import Skillset from "./Skillset";
-import Project from "../component/Project.jsx";
-import Experience from "../component/Experience.jsx";
 import Experience2 from "../component/Experience2";
 
 export default function Overall() {

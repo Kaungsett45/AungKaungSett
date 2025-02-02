@@ -65,11 +65,11 @@ export default function Middlepage(){
 
         <>
            <div className="relative">
-           <img src={star} alt="Star" className='absolute right-2 w-3 xs:w-6'/>
             
-            <div  style={{ borderRadius: '0 0 100px 0' }} className="cut-corner">
-                <h2 className="mx-1 font-rale font-extrabold tracking-wide  text-lg xs:text-x lg:text-2xl"   style={{ color: '#FFDAB9' }}>SKILL SET</h2>
+            <div  >
+                <h2 className="mx-4 font-rale font-extrabold tracking-wide  text-lg xs:text-x lg:text-2xl"   style={{ color: '#1A8B9C' }}>SKILL SET</h2>
             </div>
+           <img src={star} alt="Star" className=' absolute right-2 w-3 xs:w-6'/>
 
             <div className='flex overflow-x-hidden '>
                
@@ -92,7 +92,7 @@ export default function Middlepage(){
   </div>
          
             </div>
-                <img src={star} alt="Star" className='absolute left-2 w-3  lg:top-16 lg:w-4'/>
+                <img src={star} alt="Star" className='-mt-6 absolute left-2 w-3  lg:top-16 lg:w-4'/>
            </div>
         </>
     )

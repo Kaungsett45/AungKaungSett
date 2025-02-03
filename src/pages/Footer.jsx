@@ -43,7 +43,7 @@ export default function Footer() {
      <BackToTopButton />
      </div>
      </div>
-        <div className='border-4 flex  flex-col items-start p-2 justify-between xss:p-4 xs:px-5 xs:py-2 xl:px-[260px] sxl:px-[60px] 1sxl:px-[100px]  2sxl:px-[160px] '>
+        <div className=' flex  flex-col items-start p-2 justify-between xss:p-4 xs:px-5 xs:py-2 xl:px-[260px] sxl:px-[60px] 1sxl:px-[100px]  2sxl:px-[160px] '>
          
                 <div className=" w-full flex p-2  flex-col  font-semibold "
                >

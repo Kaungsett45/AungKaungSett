@@ -17,31 +17,27 @@ export default function Introparagraph() {
   return (
     <>
       <h2
-        className="absolute tracking-wide right-0 text-center text-lg  font-extrabold w-[110px] py-1 px-2 rounded-tr-xl rounded-tl-xl font-rale xs:text-2xl xs:py-2 xs:w-[130px] lg:text-2xl"
+        className="flex justify-end tracking-wide right-0 text-center text-lg  font-extrabold  py-1 px-2 rounded-tr-xl rounded-tl-xl font-rale xs:text-2xl xs:py-2 xs:w-[130px] lg:text-2xl"
         style={{ color: "#1A8B9C" }}
       >
         INTRO
       </h2>
 
       <div
-        className=" font-medium my-8 p-4 rounded-l-lg font-mari  rounded-b-lg text-xs xs:text-lg xs:p-6 "
+        className=" font-medium my-8 p-4 rounded-l-lg font-mari  rounded-b-lg text-xs xs:text-lg xs:p-6 
+         leading-4 border-2  rounded-md mt-4 
+             dark:shadow-[0_0_6px_rgba(26, 139, 156, 0.3)] dark:hover:shadow-[0_0_10px_rgba(26, 139, 156, 0.5)]"
         style={{ color: "#686D76" }}
       >
         {/*first para*/}
         {first && (
           <>
          <div className='xl:h-[260px]'>
-            <p className=" text-pretty leading-5 pb-3">
-              I began my programming journey during 2022,
-              initially focusing on IT and FE exams from ITPEC.
+            <p className=" text-left leading-5 pb-3">
+            🚀 My programming journey began in 2022, where I focused on IT  with ITPEC. During this time, I discovered my passion for Java and quickly, diving into Spring. 
             </p>
-            <p className=" text-pretty leading-5 pb-3">
-              This experience allowed me to acquire valuable knowledge related
-              to IT and other areas. During this time, I started learning Java,
-            </p>
-            <p className=" text-pretty leading-5 pb-2">
-              which was necessary to pass the exams. Java quickly became my main
-              programming language, and I began working with Spring.
+            <p className="text-left leading-5 pb-3">
+            ⚡ In 2024, my focus shifted to React, a framework that captivated me with its potential. Since then, I've been honing my skills in both React development and UI/UX design, exploring new ways to create intuitive user experiences.
             </p>
             </div>
           </>
@@ -52,17 +48,9 @@ export default function Introparagraph() {
           <>
            <div className='xl:h-[260px]'>
             <p className="leading-5 pb-3">
-            In 2024, my focus shifted towards frameworks, especially React.
-             I became captivated by its potential and decided to pursue a career.
-            </p>
+            💡 Take a look at my portfolio to explore my projects, including work with React, Node.js, and my evolving UI/UX design skills.   </p>
             <p className="leading-5 pb-3">
-            Currently, I'm deepening my expertise in React, exploring all aspects of development with it,
-             while also nurturing my interest in UI/UX design.
-            </p>
-            <p className="leading-5 pb-2">
-            Explore my portfolio to see my projects and recent work with React, 
-            Node.js,and my evolving UI/UX design skills.
-            </p>
+            🤝 Let's connect and build something extraordinary! ✨ </p> 
             </div>
           </>
         )}

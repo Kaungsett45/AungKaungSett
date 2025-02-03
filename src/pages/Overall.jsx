@@ -64,28 +64,23 @@ export default function Overall() {
               </div>
             </div> */}
 
-            <div className="flex justify-between items-center my-6">
+            <div className="flex justify-center  items-center my-6">
               {/* <hr className="border-2 border-[#1A8B9C] my-2 w-full xs:w-38 sm:w-40" /> */}
-              <hr className="border-2 border-[#1A8B9C] my-2 w-full xs:w-38 sm:w-40 
-  dark:border-[#1A8B9C] dark:shadow-[0_0_10px_#1A8B9C] dark:opacity-80" />
-
-           
+               
               <Link to="https://github.com/Kaungsett45" target="_blank">
-                            <button className="flex items-center font-monst font-bold mx-2 py-3 px-6 border-2 shadow-lg 
-                border-[#1A8B9C] rounded-[6px] p-4 text-sm xs:text-base md:text-lg 
-                dark:border-[#1A8B9C] dark:shadow-[0_0_10px_#1A8B9C] dark:opacity-90 dark:hover:shadow-[0_0_15px_#1A8B9C] transition-all duration-300">
+                            <button className="flex border-[#1A8B9C] rounded-full items-center font-monst font-bold mx-2 py-2 px-6 border-2  ">
                 
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="mx-1 w-6 h-6 xs:w-7 xs:h-7 md:w-8 md:h-8"
-                />
+               
                 Github
               </button>
 
               </Link>
-              <hr className="border-2 border-[#1A8B9C] my-2 w-full xs:w-38 sm:w-40 
-      dark:border-[#1A8B9C] dark:shadow-[0_0_10px_#1A8B9C] dark:opacity-80" />
-      </div>
+              <Link to= "https://drive.google.com/file/d/16oTYIA3kZ4k-uCJyoT-uSv5p66g7yD_l/view?usp=drive_link" target="_blank">
+                <button className='
+               flex border-[#1A8B9C] rounded-full items-center font-monst font-bold mx-2 py-2 px-6 border-2 
+                '
+                >RESUME</button></Link>
+         </div>
 
             <div className="relative border-[2px] border-transparent text-white">
               <Introparagraph />

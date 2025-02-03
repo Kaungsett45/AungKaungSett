@@ -18,28 +18,28 @@ export default function Introparagraph() {
     <>
       <h2
         className="absolute tracking-wide right-0 text-center text-lg  font-extrabold w-[110px] py-1 px-2 rounded-tr-xl rounded-tl-xl font-rale xs:text-2xl xs:py-2 xs:w-[130px] lg:text-2xl"
-        style={{ color: "#FFDAB9", backgroundColor: "#204057" }}
+        style={{ color: "#1A8B9C" }}
       >
         INTRO
       </h2>
 
       <div
-        className="my-8 p-4 rounded-l-lg font-mari font-thin rounded-b-lg text-xs xs:text-lg xs:p-6 "
-        style={{ backgroundColor: "#204057", color: "white" }}
+        className=" font-medium my-8 p-4 rounded-l-lg font-mari  rounded-b-lg text-xs xs:text-lg xs:p-6 "
+        style={{ color: "#686D76" }}
       >
         {/*first para*/}
         {first && (
           <>
          <div className='xl:h-[260px]'>
-            <p className="leading-5 pb-3">
+            <p className=" text-pretty leading-5 pb-3">
               I began my programming journey during 2022,
               initially focusing on IT and FE exams from ITPEC.
             </p>
-            <p className="leading-5 pb-3">
+            <p className=" text-pretty leading-5 pb-3">
               This experience allowed me to acquire valuable knowledge related
               to IT and other areas. During this time, I started learning Java,
             </p>
-            <p className="leading-5 pb-2">
+            <p className=" text-pretty leading-5 pb-2">
               which was necessary to pass the exams. Java quickly became my main
               programming language, and I began working with Spring.
             </p>
@@ -69,11 +69,11 @@ export default function Introparagraph() {
 
         <div className="flex justify-end">
           <button aria-label="first-pg"
-            className={` w-4 h-4 mx-1 rounded-full  ${first ? 'bg-[#FF6F61]' : 'bg-white'}`}
+            className={` w-4 h-4 mx-1 rounded-full border-2 border-black  ${first ? 'bg-[#FF6F61]' : 'bg-white'}`}
             onClick={ShowFirst}
           ></button>
           <button aria-label="second-pg"
-            className={` w-4 h-4 mx-1 rounded-full  ${second ? 'bg-[#FF6F61]' : 'bg-white'}`}
+            className={` w-4 h-4 mx-1 rounded-full border-2 border-black ${second ? 'bg-[#FF6F61]' : 'bg-white'}`}
             onClick={ShowSecond}
           ></button>
         </div>

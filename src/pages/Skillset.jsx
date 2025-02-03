@@ -67,7 +67,7 @@ export default function Middlepage(){
            <div className="relative">
             
             <div  >
-                <h2 className="mx-4 font-rale font-extrabold tracking-wide  text-lg xs:text-x lg:text-2xl"   style={{ color: '#1A8B9C' }}>SKILL SET</h2>
+                <h2 className="mx-4 font-rale font-extrabold tracking-wide  text-lg xs:text-x lg:text-2xl"   style={{ color: '#1A8B9C' }}>SKILL SETS</h2>
             </div>
            <img src={star} alt="Star" className=' absolute right-2 w-3 xs:w-6'/>
 

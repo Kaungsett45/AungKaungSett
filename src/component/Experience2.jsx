@@ -22,7 +22,7 @@ export default function Experience2() {
                 style={ {color : '#5A5E66'}}>🛠  Frontend Developer  </p>
                 <p className='m-1 font-semibold'
                 style={ {color : '#5A5E66'}}>📍 2024 - Present </p>
-            <div className="text-left leading-4 border-2 p-2 rounded-md mt-4 
+            <div className="text-left font-mari leading-4 border-2 p-2 rounded-md mt-4 
              dark:shadow-[0_0_6px_rgba(120,120,120,0.3)] dark:hover:shadow-[0_0_10px_rgba(150,150,150,0.5)]    "> 
                <ul className='lg:ml-6 ml-4 list-disc md:text-lg lg:text-xl xss:text-xs   xs:text-sm'>
                     <li >Wrote technical content and guides for developers as content writer .</li>

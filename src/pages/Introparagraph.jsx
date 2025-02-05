@@ -24,7 +24,7 @@ export default function Introparagraph() {
       </h2>
 
       <div
-        className=" font-medium my-8 p-4 rounded-l-lg font-mari  rounded-b-lg text-xs xs:text-lg xs:p-6 
+        className=" font-medium my-8 p-4 rounded-l-lg font-mari  rounded-b-lg text-sm xs:text-lg xs:p-6 
          leading-4 border-2  rounded-md mt-4 
              dark:shadow-[0_0_6px_rgba(26, 139, 156, 0.3)] dark:hover:shadow-[0_0_10px_rgba(26, 139, 156, 0.5)]"
         style={{ color: "#686D76" }}
@@ -32,7 +32,7 @@ export default function Introparagraph() {
         {/*first para*/}
         {first && (
           <>
-         <div className='xl:h-[260px]'>
+         <div className='xl:h-[260px] xss:h-[220px]'>
             <p className=" text-left leading-5 pb-3">
             🚀 My programming journey began in 2022, where I focused on IT  with ITPEC. During this time, I discovered my passion for Java and quickly, diving into Spring. 
             </p>
@@ -46,7 +46,7 @@ export default function Introparagraph() {
         {/*Seccond para*/}
         {second && (
           <>
-           <div className='xl:h-[260px]'>
+           <div className='xl:h-[260px] xss:h-[220px]'>
             <p className="leading-5 pb-3">
             💡 Take a look at my portfolio to explore my projects, including work with React, Node.js, and my evolving UI/UX design skills.   </p>
             <p className="leading-5 pb-3">

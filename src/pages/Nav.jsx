@@ -25,7 +25,7 @@ export default function Navigation(){
             ">PORTFOLIO</NavLink></h2>
             <div className=' flex  items-center '>
                 {/* <p className='mx-4 font-bold font-roboto text-lg xs:text-xl sm:mx-8 '><NavLink to="/blogs">Blogs</NavLink></p> */}
-                <Link to= "https://drive.google.com/file/d/16oTYIA3kZ4k-uCJyoT-uSv5p66g7yD_l/view?usp=drive_link" target="_blank">
+                <Link to= "https://drive.google.com/file/d/1k93CoLzg3DmkOgl5yGklM31xO9eDwJ_E/view?usp=sharing" target="_blank">
                 <button className='
                flex  border-[#1A8B9C] border-2 px-3 py-1 rounded-full items-center font-monst font-bold mr-4 xs:text-lg sm:text-xl lg:text-2xl
                 '

@@ -12,7 +12,7 @@ export default function Hobbies({showHobbies}) {
       sequence={[
         "Hello ,👋", 3000, 
         " I'm Aung Kaung Sett.", 3000, 
-        "Full Stack Developer.", 3000,
+        "Frontend Developer.", 3000,
       ]}
       speed={50}
       repeat={Infinity}
@@ -20,7 +20,7 @@ export default function Hobbies({showHobbies}) {
     />
         </div>
 
-        <div className="flex space-x-2 my-6">
+        <div className="flex my-6 space-x-2">
               {/* <hr className="border-2 border-[#1A8B9C] my-2 w-full xs:w-38 sm:w-40" /> */}
                
               <Link to="https://github.com/Kaungsett45" target="_blank">
@@ -31,7 +31,7 @@ export default function Hobbies({showHobbies}) {
     viewBox="0 0 24 24"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
-    className=" text-black mr-1 hover:text-gray-600"
+    className="mr-1 text-black  hover:text-gray-600"
   >
     <path
       fillRule="evenodd"

@@ -33,7 +33,12 @@ export default function Project({showPj  }) {
         Demo : 'https://drive.google.com/file/d/1dS7NgOjawJAhvOGwJJ8wSl1UwvjRwLtT/view?usp=sharing',
         
         },
-        // Add more items as needed
+        { id: 4, title: 'CodeExplainer', image: '/quizzimockup.svg',
+        language_1: '/java.svg' ,language_2: '/css.svg' ,language_3: '/spring.svg' ,
+        github : 'https://github.com/Kaungsett45/AiCodeExplainer',
+        Demo : 'https://drive.google.com/file/d/1dS7NgOjawJAhvOGwJJ8wSl1UwvjRwLtT/view?usp=sharing',
+        
+        },
       ];
 
       const sliderRef = useRef(null);
@@ -70,7 +75,7 @@ export default function Project({showPj  }) {
       </motion.div>
 
       <motion.div 
-        className="my-8 relative m-2 glass-card p-6 shadow-2xl hover:shadow-3xl transition-all duration-300"
+        className="relative p-6 m-2 my-8 transition-all duration-300 shadow-2xl glass-card hover:shadow-3xl"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -109,33 +114,33 @@ export default function Project({showPj  }) {
                   alt="mockup"
                   onLoad={handleimageload}
                   style={isloading ? { visibility: 'hidden' } : {}}
-                  className='h-40 xss:h-36 md:h-44 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300' 
+                  className='h-40 transition-shadow duration-300 rounded-lg shadow-lg xss:h-36 md:h-44 hover:shadow-xl' 
                 />
               </motion.div>
         <div>
              <div className='flex items-center justify-between '>
                      <motion.div 
-                       className='flex items-center space-x-3 my-2 glass-card p-3 rounded-full'
+                       className='flex items-center p-3 my-2 space-x-3 rounded-full glass-card'
                        whileHover={{ scale: 1.05 }}
                      >
                        <motion.img 
                          src={item.language_1} 
                          alt="tech1" 
-                         className='w-7 h-7 sm:w-9 sm:h-9 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200' 
+                         className='transition-transform duration-200 w-7 h-7 sm:w-9 sm:h-9 md:w-8 md:h-8 hover:scale-110' 
                          whileHover={{ rotate: 360 }}
                          transition={{ duration: 0.5 }}
                        />
                        <motion.img 
                          src={item.language_2} 
                          alt="tech2" 
-                         className='w-7 h-7 sm:w-9 sm:h-9 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200' 
+                         className='transition-transform duration-200 w-7 h-7 sm:w-9 sm:h-9 md:w-8 md:h-8 hover:scale-110' 
                          whileHover={{ rotate: 360 }}
                          transition={{ duration: 0.5 }}
                        />
                        <motion.img 
                          src={item.language_3} 
                          alt="tech3" 
-                         className='w-7 h-7 sm:w-9 sm:h-9 md:w-8 md:h-8 hover:scale-110 transition-transform duration-200' 
+                         className='transition-transform duration-200 w-7 h-7 sm:w-9 sm:h-9 md:w-8 md:h-8 hover:scale-110' 
                          whileHover={{ rotate: 360 }}
                          transition={{ duration: 0.5 }}
                        />
@@ -144,7 +149,7 @@ export default function Project({showPj  }) {
                          <Link to={item.github} target="_blank" aria-label="Github Link">
                            <motion.button 
                              aria-label="github" 
-                             className='flex items-center font-monst font-bold m-1 glass-card p-3 rounded-full text-sm xs:text-base md:text-lg hover:bg-gray-800 hover:text-white transition-all duration-300'
+                             className='flex items-center p-3 m-1 text-sm font-bold transition-all duration-300 rounded-full font-monst glass-card xs:text-base md:text-lg hover:bg-gray-800 hover:text-white'
                              whileHover={{ scale: 1.1, y: -2 }}
                              whileTap={{ scale: 0.95 }}
                            >
@@ -176,7 +181,7 @@ export default function Project({showPj  }) {
       </Slider>
       
       <motion.button
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 glass-card p-4 rounded-full shadow-lg z-10 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all duration-300"
+        className="absolute z-10 flex items-center justify-center p-4 transition-all duration-300 transform -translate-y-1/2 rounded-full shadow-lg left-2 top-1/2 glass-card hover:bg-gray-800 hover:text-white"
         onClick={prevSlide}
         whileHover={{ scale: 1.1, x: -2 }}
         whileTap={{ scale: 0.95 }}
@@ -185,7 +190,7 @@ export default function Project({showPj  }) {
       </motion.button>
       
       <motion.button
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 glass-card p-4 rounded-full shadow-lg z-10 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all duration-300"
+        className="absolute z-10 flex items-center justify-center p-4 transition-all duration-300 transform -translate-y-1/2 rounded-full shadow-lg right-2 top-1/2 glass-card hover:bg-gray-800 hover:text-white"
         onClick={nextSlide}
         whileHover={{ scale: 1.1, x: 2 }}
         whileTap={{ scale: 0.95 }}

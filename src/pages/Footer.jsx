@@ -19,7 +19,7 @@ export default function Footer() {
         
         <div className='flex items-center mx-2 justify-between space-x-2 xss:p-4 xs:px-2 xs:py-2 xl:px-[260px] sxl:px-[60px] 1sxl:px-[100px] 2sxl:px-[160px]'>
           <div className='flex py-4 space-x-4'>
-            <Link to="www.linkedin.com/in/aung-kaung-sett-537115395" target="_blank" aria-label="Linkedin Link">
+            <Link to="https://www.linkedin.com/in/aung-kaung-sett-537115395" target="_blank" aria-label="Linkedin Link">
               <motion.button 
                 aria-label="Linkedin"
                 className='flex items-center glass-card p-3 hover:bg-[#0077B5] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl'

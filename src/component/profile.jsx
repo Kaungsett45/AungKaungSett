@@ -15,7 +15,7 @@ export default function Hobbies({showHobbies}) {
                 sequence={[
                     "Hello! 👋", 2000, 
                     "I'm Aung Kaung Sett", 2000, 
-                    "Frontend Developer", 2000,
+                    "FullStack Developer", 2000,
                     "UI/UX Enthusiast", 2000,
                 ]}
                 speed={50}

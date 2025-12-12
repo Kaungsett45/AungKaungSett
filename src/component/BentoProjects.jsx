@@ -7,7 +7,7 @@ const BentoProjects = () => {
     {
       id: 1,
       title: 'Rublet',
-      description: 'Movie streaming platform with advanced search',
+      description: 'Movie Rating System that includes Login , Search , give feedback and star functions.',
       image: '/moviemockup.svg',
       tech: ['/java.svg', '/css.svg', '/spring.svg'],
       github: 'https://github.com/Kaungsett45/Rublet',
@@ -20,7 +20,7 @@ const BentoProjects = () => {
     {
       id: 2,
       title: 'Quizzi',
-      description: 'Interactive quiz system with real-time scoring',
+      description: 'An interactive quiz system featuring real-time scoring and responsive user interaction.',
       image: '/quizzimockup.svg',
       tech: ['/java.svg', '/css.svg', '/spring.svg'],
       github: 'https://github.com/Kaungsett45/QuzziSystem',

@@ -1,6 +1,6 @@
 import React, { Profiler } from "react";
 import star from "../../public/star.svg";
-import profile from "../../public/profile3.png";
+import profile from "../../public/websitepf.svg";
 import Introparagraph from "./Introparagraph";
 import AnimatedContent from "../component/AnimatedContent.jsx";
 import { useMediaQuery } from "react-responsive";
@@ -16,12 +16,12 @@ export default function Overall() {
   return (
     <>
       <AnimatedContent>
-        <div className="px-4 py-6 relative flex justify-between items-center my-8 glass-card mx-2">
+        <div className="relative flex items-center justify-between px-4 py-6 mx-2 my-8 glass-card">
           <div className="md:max-w-[480px] flex-1">
             <motion.img 
               src={star} 
               alt="Star" 
-              className="absolute right-6 w-5 opacity-60" 
+              className="absolute w-5 right-6 opacity-60" 
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             />
@@ -40,26 +40,26 @@ export default function Overall() {
           
           {isMobile ? (
             <motion.div 
-              className="flex justify-center items-center mx-8"
+              className="flex items-center justify-center mx-8"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <div className="w-72 h-72 imgcontain relative">
+              <div className="relative w-72 h-72 imgcontain">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1A8B9C] to-[#2DA5B8] rounded-full opacity-20 blur-xl"></div>
                 <img
                   src={profile}
                   alt="profile"
-                  className="w-full h-full rounded-full object-cover shadow-2xl border-4 border-white/30 relative z-10"
+                  className="relative z-10 object-cover w-full h-full border-4 rounded-full shadow-2xl border-white/30"
                 />
               </div>
             </motion.div>
           ) : (
-            <div className="w-64 h-64 hidden">
+            <div className="hidden w-64 h-64">
               <img
                 src={profile}
                 alt="profile"
-                className="w-full h-full rounded-full object-cover"
+                className="object-cover w-full h-full rounded-full"
               />
             </div>
           )}

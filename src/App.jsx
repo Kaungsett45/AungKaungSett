@@ -1,39 +1,41 @@
-import Navi from './pages/Nav'
-import Footer from './pages/Footer'
-import { useState ,useEffect } from 'react'
-import SplashMessage from './pages/Splashscreen'
-import AnimatedContent from './component/AnimatedContent'
-function App() {
+import { useEffect, useState } from 'react'
+import { Outlet } from 'react-router-dom'
+import SiteHeader from './pages/Nav'
+import SiteFooter from './pages/Footer'
+import SplashScreen from './pages/Splashscreen'
 
-   const [isLoading, setIsLoading] = useState(true);
-   
-    useEffect(() => {
-    
+// Shown once per browser tab. Returning to the site from another page
+// shouldn't make you sit through it again.
+const SPLASH_KEY = 'splash-seen'
+
+export default function App() {
+  const [showSplash, setShowSplash] = useState(
+    () => !sessionStorage.getItem(SPLASH_KEY)
+  )
+
+  useEffect(() => {
+    if (!showSplash) return
+
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    },4500); 
+      sessionStorage.setItem(SPLASH_KEY, '1')
+      setShowSplash(false)
+    }, 1100)
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)
+  }, [showSplash])
 
-    if (isLoading) {
-    return <SplashMessage />;
-  }
-  
-  return(
+  return (
     <>
-    
-    <div className='min-h-screen bg-white from-slate-50 via-blue-50 to-cyan-50'>
-        <div className='navbar pt-safe'>
-              <Navi/>
-        </div>
-        <AnimatedContent>
-        <Footer />
-        </AnimatedContent>
-     
-    </div>
+      {showSplash && <SplashScreen />}
+
+      <div id="top" className="min-h-screen">
+        <SiteHeader />
+
+        <main id="main" className="page">
+          <Outlet />
+          <SiteFooter />
+        </main>
+      </div>
     </>
   )
 }
-
-export default App;

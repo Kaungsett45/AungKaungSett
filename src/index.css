@@ -1,336 +1,556 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import-normalize;
 
-html {
-  scroll-behavior: smooth;
+/* ------------------------------------------------------------------ *
+ * Design tokens
+ *
+ * Everything visual resolves to a variable here. Change a value once
+ * and the whole site follows. Nothing below should hardcode a colour.
+ * ------------------------------------------------------------------ */
+
+:root,
+:root[data-theme='light'] {
+  --paper: #fcfcfa; /* page background — warm off-white, not pure white */
+  --ink: #16161a; /* headings, primary text */
+  --ink-muted: #55555e; /* body copy */
+  --ink-faint: #8a8a94; /* metadata, years, captions */
+  /* The original brand teal, kept for anything large or decorative where
+     contrast isn't a legibility concern. */
+  --brand: #1a8b9c;
+  --brand-2: #2da5b8; /* the second stop of the original heading gradient */
+  /* A darker cut of the same hue for small text and links, where the
+     brand teal would fall under 4.5:1 on --paper. */
+  --accent: #10707e;
+  --accent-hover: #0b5661;
+  --accent-wash: #e2f0f2; /* teal fill behind buttons and tags */
+  --on-accent: #ffffff; /* text on a solid teal fill */
+  --selection: #cfe9ed;
+}
+
+:root[data-theme='dark'] {
+  --paper: #101012;
+  --ink: #f3f3f0;
+  --ink-muted: #a6a6ae;
+  --ink-faint: #75757e;
+  --brand: #2da5b8;
+  --brand-2: #6fdcec;
+  --accent: #5ec8d8;
+  --accent-hover: #8adae6;
+  --accent-wash: #16292d;
+  --on-accent: #08191c; /* dark ink on the lighter dark-mode teal */
+  --selection: #1d4a52;
 }
 
 :root {
-  --primary-color: #1A8B9C;
-  --primary-gradient: linear-gradient(135deg, #1A8B9C 0%, #2DA5B8 100%);
-  --secondary-gradient: linear-gradient(135deg, #FF6F61 0%, #FF8A75 100%);
-  --accent-color: #FF6F61;
-  --border-color: #204057;
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --shadow-light: 0 8px 32px rgba(26, 139, 156, 0.1);
-  --shadow-medium: 0 12px 40px rgba(26, 139, 156, 0.15);
-  --shadow-heavy: 0 20px 60px rgba(26, 139, 156, 0.2);
-  --roboto: 17px "Roboto", sans-serif;
-  --mon: 1.2rem "Montserrat", sans-serif;
-  --rale: 1.3rem "Raleway", sans-serif;
-  --intro-font: 1.1rem "Merriweather Sans", sans-serif;
-  --bubble: 1.2rem "Rubik Bubbles", system-ui;
-}
-.navbar {
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-  
-}
-.animated-image {
-  width: 100px;
-  position: relative;
-  animation: moveBackAndForth 3s infinite alternate ease-in-out;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  /* The original families, each given one job so they stop competing. */
+  --font-display: 'Raleway', system-ui, sans-serif; /* headings */
+  --font-sans: 'Montserrat', system-ui, sans-serif; /* buttons, UI */
+  --font-body: 'Merriweather Sans', system-ui, sans-serif; /* copy */
+  --font-meta: 'Roboto', system-ui, sans-serif; /* dates, tags, labels */
+
+  /* Fluid type scale. Editorial layouts live or die on the jump between
+     display and body — this keeps that ratio intact at every width. */
+  --text-display: clamp(2.75rem, 1.6rem + 5.2vw, 5.25rem);
+  --text-title: clamp(1.5rem, 1.15rem + 1.5vw, 2.25rem);
+  --text-item: clamp(1.15rem, 1.05rem + 0.45vw, 1.4rem);
+  --text-body: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+  --text-meta: 0.8125rem;
+  --text-eyebrow: 0.6875rem;
+
+  /* Vertical rhythm between major sections. */
+  --space-section: clamp(4rem, 2.5rem + 6vw, 7.5rem);
+
+  /* Horizontal frame. One container rule, not ten breakpoints. */
+  --page-max: 1080px;
+  --prose-max: 62ch;
+  --page-gutter: clamp(1.25rem, 5vw, 4rem);
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+/* ------------------------------------------------------------------ *
+ * Base
+ * ------------------------------------------------------------------ */
+
+* {
+  box-sizing: border-box;
 }
 
-.gradient-text {
-  background: var(--primary-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hover-lift {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-medium);
-}
-
-
-@keyframes moveBackAndForth {
-  0% {
-    left: 0;
-  }
- 100% {
-    left: calc(40% - 100px); /* Adjust the calculation based on your image size */
-  }
-}
-
-@keyframes moveRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.logo-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: max-content;
-  animation: moveRight 48s linear infinite;
-}
-
-.skill-icon {
-  transition: all 0.3s ease;
-  filter: grayscale(0.3) brightness(0.9);
-}
-
-.skill-icon:hover {
-  filter: grayscale(0) brightness(1.1);
-  transform: scale(1.1) translateY(-2px);
-}
-
-
-
-
-
-.cut-corner {
-  width: 200px;
-  background: var(--primary-gradient);
-  clip-path: polygon(0 0, 0 0, 100% 0%, 100% 0%, 0% 100%, 10%);
-  padding: 10px;
-  box-shadow: var(--shadow-light);
-}
-
-.cut-corner2 {
-  width: 200px;
-  background: var(--primary-gradient);
-  clip-path: polygon(0 0, 0 0, 100% 0%, 00% 0%, 0% 00%, 0%);
-  padding: 10px;
-  margin-left: auto;
-  box-shadow: var(--shadow-light);
-}
-
-.modern-button {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  border-radius: 12px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modern-button:hover {
-  background: var(--primary-gradient);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
-  color: white;
-}
-  
-  /* .card {
-    border:4px solid black;
-  border-radius: 15px;
-  padding: 4px;
-  margin: 6px;
-  }
-  .card img{
-  width: 52px;
-  height: 60px;
-  object-fit:contain;
-  } */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: transparent;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink-muted);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.section-divider {
+::selection {
+  background: var(--selection);
+  color: var(--ink);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ------------------------------------------------------------------ *
+ * Typographic primitives
+ * ------------------------------------------------------------------ */
+
+.display {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+/* Small tracked-out label that opens each section. Teal — this is the
+   brand's main appearance on the page. */
+.eyebrow {
+  font-family: var(--font-meta);
+  font-size: var(--text-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Same label, but stepped back — for metadata that shouldn't compete
+   with a section heading. */
+.eyebrow-quiet {
+  color: var(--ink-faint);
+}
+
+.meta {
+  font-family: var(--font-meta);
+  font-size: var(--text-meta);
+  font-weight: 500;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.lede {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1rem + 0.95vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.prose {
+  max-width: var(--prose-max);
+}
+
+/* The original section heading: heavy, tracked-out uppercase in the teal
+   gradient. This is the site's most recognisable element — kept as-is,
+   just put on the new type scale. */
+.heading-brand {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 0.95rem + 1.15vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  background-image: linear-gradient(100deg, var(--brand), var(--brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+}
+
+/* Content sits directly on the page. Grouping comes from spacing and
+   type hierarchy — there are no panels. */
+
+/* ------------------------------------------------------------------ *
+ * Layout
+ * ------------------------------------------------------------------ */
+
+.page {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+/* ------------------------------------------------------------------ *
+ * Components
+ * ------------------------------------------------------------------ */
+
+/* Text link with an underline that grows on hover, rather than a
+   colour swap. Reads quieter and more editorial. */
+.link {
+  color: var(--ink);
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 1px;
+  transition: background-size 0.25s ease, color 0.2s ease;
+  padding-bottom: 1px;
+}
+
+.link:hover {
+  color: var(--accent-hover);
+  background-size: 100% 2px;
+}
+
+/* Same idea, but the underline wipes in from the left. Used on lists
+   where every row is a link and a static underline would be noisy. */
+.link-wipe {
+  color: var(--ink);
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 1px;
+  transition: background-size 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-wipe:hover,
+a:hover .link-wipe,
+a:focus-visible .link-wipe {
+  background-size: 100% 1px;
+}
+
+/* Block, not pill. Square corners on every interactive surface — the
+   right angles are what tie the buttons, tags and layout together. */
+/* Teal chip. Small enough that the wash reads as a label, not a panel. */
+.tag {
+  font-family: var(--font-meta);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--accent-wash);
+  padding: 0.24rem 0.65rem;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+/* Teal throughout — wash fill with teal text, filling solid on hover.
+   Never black. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-meta);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  background: var(--accent-wash);
+  padding: 0.55rem 1.15rem;
+  border: 0;
+  cursor: pointer;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.button:hover {
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+/* The primary call to action: solid teal from the start. */
+.button-brand {
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+.button-brand:hover {
+  color: var(--on-accent);
+  background: var(--accent-hover);
+}
+
+/* ------------------------------------------------------------------ *
+ * Org logos
+ *
+ * These are supplied as wordmarks on white backgrounds, so they get a
+ * fixed height and free width rather than being forced into a square.
+ * ------------------------------------------------------------------ */
+
+/* Height is per-logo (--logo-h from content.js): a stacked square
+   lockup needs far more height than a wide wordmark to read at the
+   same visual size. */
+.org-logo {
+  height: var(--logo-h, 2rem);
+  width: auto;
+  max-width: 12rem;
+  object-fit: contain;
+  object-position: left;
+  /* Drops the white background into the paper on light backgrounds. */
+  mix-blend-mode: multiply;
+}
+
+/* Multiply would erase the logo against a dark page, so give it back the
+   white plate the artwork assumes. */
+:root[data-theme='dark'] .org-logo {
+  mix-blend-mode: normal;
+  background: #fff;
+  padding: 0.3rem 0.45rem;
+}
+
+/* ------------------------------------------------------------------ *
+ * Projects
+ *
+ * The oversized numeral is the section's identity, so it is sized in vw
+ * and survives down to the narrowest phone. Everything under the
+ * hover query is enrichment — the layout is already complete without it.
+ * ------------------------------------------------------------------ */
+
+.project-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(3.25rem, 1.5rem + 8vw, 7rem);
+  font-weight: 800;
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  background-image: linear-gradient(155deg, var(--brand), var(--brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Architecture diagram: tiers hung off a teal rail, with a square node
+   marking each one. Squares, not dots — same block language as the
+   buttons and tags. */
+.stack-diagram {
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.stack-diagram::before {
+  content: '';
+  position: absolute;
+  left: 0.2rem;
+  top: 0.45rem;
+  bottom: 0.45rem;
+  width: 2px;
+  background: linear-gradient(var(--brand), var(--brand-2));
+  opacity: 0.45;
+}
+
+.stack-tier {
+  position: relative;
+}
+
+.stack-tier + .stack-tier {
+  margin-top: 1.6rem;
+}
+
+.stack-tier::before {
+  content: '';
+  position: absolute;
+  left: -1.6rem;
+  top: 0.3rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: var(--brand);
+}
+
+/* A pulse that travels down the rail while the project is hovered. */
+@media (hover: hover) and (pointer: fine) {
+  .stack-diagram::after {
+    content: '';
+    position: absolute;
+    left: 0.2rem;
+    top: 0.45rem;
+    width: 2px;
+    height: 2.5rem;
+    background: linear-gradient(transparent, var(--brand-2), transparent);
+    opacity: 0;
+  }
+
+  .project:hover .stack-diagram::after {
+    animation: stack-pulse 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes stack-pulse {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(100% + 8rem));
+  }
+}
+
+/* Teal rule under the title that wipes across on hover. */
+.project-title-rule {
+  display: block;
   height: 2px;
-  background: var(--primary-gradient);
-  border-radius: 1px;
-  margin: 2rem 0;
-  opacity: 0.3;
-}
-  
-@media only screen and (min-width: 375px) and (max-width: 460px)  {
-    .navbar{
-        margin: 0px 10px ;
-    }
-    .edures{
-      min-height: 335px;
-      padding:30px;
-    }
+  width: 0;
+  margin-top: 0.6rem;
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media only screen and (min-width: 461px) and (max-width: 640px)  {
-  .navbar{
-      margin: 0px 10px ;
+@media (hover: hover) and (pointer: fine) {
+  .project-number {
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
   }
-  .edures{
-    min-height: 345px;
-    padding:40px;
+
+  .project:hover .project-number {
+    opacity: 1;
   }
-  .cut-corner {
-    width: 230px;
-    background: #1A8B9C;
-    clip-path: polygon(0 0, 0 0, 100% 0%, 100% 0%, 0% 100%, 10%);
-    padding: 10px;
-    
-    }
-    
-    .card {
-     border-radius: 15px;
-    padding: 4px;
-    margin: 6px;
-    
-    }
-    .card img{
-    width: 86px;
-    height: 80px;
-    object-fit:contain;
-    }
-  
 
-}
-
-@media only screen and (min-width: 641px) and (max-width: 767px)  {
-    .navbar{
-        margin: 0px 20px ;
-    }
-
-    .edures{
-      min-height: 345px;
-      padding:30px 60px;
-    }
-    .card {
-      border-radius: 15px;
-      padding: 4px;
-      margin: 6px;
-      
-      }
-      .card img{
-      width: 76px;
-      height: 78px;
-      object-fit:contain;
-      }
-
-}
-@media only screen and (min-width: 768px)  {
-  .cut-corner {
-    width: 220px;
-    background: #1A8B9C;
-    clip-path: polygon(0 0, 0 0, 100% 0%, 100% 0%, 0% 100%, 10%);
-    padding: 10px;
-    
-    }
-    
-    .card {
-    border-radius: 15px;
-    padding: 4px;
-    margin: 6px;
-    
-    }
-    .card img{
-    width: 76px;
-    height: 78px;
-    object-fit:contain;
-    }
-
-}
-
-
-@media only screen and (min-width: 900px)  {
-
-    .navbar{
-      margin: auto 20px;
-      padding: 0px;
-    }
-    .imgcontain{
-      width: 320px;
-      height:320px;
-    }
-    .cut-corner {
-      width: 230px;
-      }
-      
-      .card {
-       padding: 6px;
-      margin: 6px;
-      
-      }
-      .card img{
-      width: 82px;
-      height: 82px;
-      object-fit:contain;
-      }
-}
-@media only screen and (min-width: 1000px)   {
-
-  .navbar{
-    margin: auto 60px;
-    padding: 0px;
+  .project-mockup {
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    opacity: 0.75;
   }
-}
-@media only screen and (min-width: 1100px)   {
 
-  .navbar{
-    margin: auto 100px;
-    padding: 0px;
+  .project:hover .project-mockup {
+    transform: translateY(-6px) scale(1.06);
+    opacity: 1;
   }
-}
-@media only screen and (min-width: 1200px)   {
 
-  .navbar{
-    margin: auto 160px;
-    padding: 0px;
+  .project:hover .project-title-rule {
+    width: 3.5rem;
   }
 }
 
-
-@media only screen and (min-width: 1340px)  {
-
-  .navbar{
-    margin: auto 280px;
-    padding: 0px;
+/* Touch devices get the rule permanently, since it can never wipe in. */
+@media (hover: none), (pointer: coarse) {
+  .project-title-rule {
+    width: 3.5rem;
   }
-
- 
-
 }
 
-@media only screen and (min-width: 1440px)  {
+/* ------------------------------------------------------------------ *
+ * Skill marquee
+ *
+ * The track holds the icon list twice, so translating it by exactly
+ * -50% lands on an identical frame and the loop is seamless.
+ * ------------------------------------------------------------------ */
 
-  .navbar{
-    margin: auto 300px;
-    padding: 0px;
-  }
-
+.marquee {
+  overflow: hidden;
+  /* Fade both edges so icons enter and leave instead of being clipped. */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
 }
-@media only screen and (min-width: 1640px)  {
 
-  .navbar{
-    margin: auto 360px;
-    padding: 0px;
-  }
-
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 42s linear infinite;
 }
-@media only screen and (min-width: 1840px)  {
 
-  .navbar{
-    margin: auto 480px;
-    padding: 0px;
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.skill-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-inline: 0.4rem;
+  filter: grayscale(0.5);
+  opacity: 0.7;
+  transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.skill-icon:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.skill-icon img {
+  width: 2.1rem;
+  height: 2.1rem;
+  object-fit: contain;
+}
+
+/* ------------------------------------------------------------------ *
+ * Motion
+ * ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

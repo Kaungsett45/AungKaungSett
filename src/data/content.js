@@ -253,7 +253,6 @@ export const buildFlow = {
 // Drives the header nav. `id` must match the section's DOM id.
 export const sections = [
   { id: 'about', label: 'Intro' },
-  { id: 'build', label: 'How I build' },
   { id: 'skills', label: 'Skills' },
   { id: 'experience', label: 'Experience' },
   { id: 'work', label: 'Projects' },

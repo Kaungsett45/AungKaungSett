@@ -20,7 +20,7 @@ export default function Navigation() {
                 </NavLink>
                 
                 <Link 
-                    to="https://drive.google.com/file/d/13WEE4h8nTuR46posZwYijtLgoGwgynR6/view?usp=sharing" 
+                    to="https://drive.google.com/file/d/1Og3o4x_X04XnEujkFoAPv7GiwEzR2U8e/view?usp=sharing" 
                     target="_blank"
                     className='bg-[#1A8B9C] text-white px-4 py-2 rounded-lg font-monst font-semibold hover:bg-[#2DA5B8] transition-colors duration-300 xs:text-lg shadow-md hover:shadow-lg'
                 >

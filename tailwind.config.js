@@ -1,55 +1,48 @@
 /** @type {import('tailwindcss').Config} */
+
+// Tailwind reads from the CSS variables in index.css so that light and dark
+// resolve at runtime. Adding a colour means adding a token there, not here.
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
-      borderWidth: {
-        '7': '6px',
+      colors: {
+        paper: 'var(--paper)',
+        ink: {
+          DEFAULT: 'var(--ink)',
+          muted: 'var(--ink-muted)',
+          faint: 'var(--ink-faint)',
+        },
+        accent: {
+          DEFAULT: 'var(--accent)',
+          hover: 'var(--accent-hover)',
+          wash: 'var(--accent-wash)',
+        },
       },
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif'],
-        'monst' : [ 'Montserrat', 'sans-serif'],
-        'rale' : [ 'Raleway','sans-serif'],
-        'mari' : ["Merriweather Sans", 'sans-serif'],
-        'bubble':["Rubik Bubbles ", 'system-ui'],
-     
+        display: 'var(--font-display)',
+        sans: 'var(--font-sans)',
+        body: 'var(--font-body)',
+        meta: 'var(--font-meta)',
       },
-      screens: {
-        'xss':'375px',
-        'xs': '460px', // Custom extra small breakpoint
-        'sm': '640px', // Default small breakpoint
-        'md': '768px', // Default medium breakpoint
-        'lg': '900px', // Default large breakpoint
-        'sxl': '1000px', // Default extra-large breakpoint
-        '1sxl': '1100px', // Default extra-large breakpoint
-        '2sxl': '1200px', // Default extra-large breakpoint
-        'xl': '1340px', // Default extra-large breakpoint
-        // '2xl': '1536px', // Default 2xl breakpoint
-        // Add your custom breakpoints here
+      fontSize: {
+        eyebrow: 'var(--text-eyebrow)',
+        meta: 'var(--text-meta)',
+        body: 'var(--text-body)',
+        item: 'var(--text-item)',
+        title: 'var(--text-title)',
+        display: 'var(--text-display)',
       },
-      animation: {
-        'text-slide': 'text-slide 12s cubic-bezier(0.63, 0, 0.17, 1) infinite',
-    },
-    keyframes: {
-      'text-slide': {
-        '0%, 33%': {
-          transform: 'translateY(0%)',
-        },
-        '55%, 88%': {
-          transform: 'translateY(-33.33%)',
-        },
-        '100%': {
-            transform: 'translateY(-63.33%)',
-        },
+      spacing: {
+        section: 'var(--space-section)',
+        gutter: 'var(--page-gutter)',
       },
-    },
-    
-    
+      maxWidth: {
+        page: 'var(--page-max)',
+        prose: 'var(--prose-max)',
+      },
     },
   },
   plugins: [],
 }
-

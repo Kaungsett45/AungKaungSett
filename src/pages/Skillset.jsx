@@ -1,4 +1,3 @@
-
 import java from '../../public/java.svg'
 import react from '../../public/react.svg'
 import css from '../../public/css.svg'
@@ -12,6 +11,7 @@ import git from '../../public/git.svg'
 import node from '../../public/node.svg'
 import firebase from '../../public/firebase.svg'
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 export default function Middlepage(){
     const [images, setImages] = useState([
       
@@ -62,38 +62,75 @@ export default function Middlepage(){
     //   };
     
     return(
-
         <>
-           <div className="relative">
+        <motion.div 
+            className="relative glass-card p-6 my-8 mx-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+        >
+            <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+            >
+                <h2 className="mx-4 font-rale font-extrabold tracking-wide text-lg xs:text-xl lg:text-3xl bg-gradient-to-r from-[#1A8B9C] to-[#2DA5B8] bg-clip-text text-transparent">
+                    SKILL SETS
+                </h2>
+            </motion.div>
             
-            <div  >
-                <h2 className="mx-4 font-rale font-extrabold tracking-wide  text-lg xs:text-x lg:text-2xl"   style={{ color: '#1A8B9C' }}>SKILL SETS</h2>
-            </div>
-           <img src={star} alt="Star" className=' absolute right-2 w-3 xs:w-6'/>
+            <motion.img 
+                src={star} 
+                alt="Star" 
+                className='absolute right-4 w-4 xs:w-6 opacity-60'
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            />
 
-            <div className='flex overflow-x-hidden '>
-               
-                <div >
-                    <div className="flex flex-row  my-8 logo-wrapper"> 
-                            {images.map((image, index) => (
-                                <div key={index} >
-                                <img  src={image.src} alt={image.alt} className="w-16 h-16 mx-4 px-2 " />
-                                </div>
-                                ))}
-                            
-                            {images.map((image, index) => (
-                                <img key={`duplicate-${index}`} src={image.src} alt={image.alt} className="w-16 h-16 mx-4 px-2" />
-                                ))}
-                          
+            <div className='flex overflow-x-hidden mt-4'>
+                <div>
+                    <div className="flex flex-row my-8 logo-wrapper"> 
+                        {images.map((image, index) => (
+                            <motion.div 
+                                key={index}
+                                className="skill-icon mx-4 p-3 glass-card hover-lift"
+                                whileHover={{ scale: 1.1, y: -5 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                            >
+                                <img 
+                                    src={image.src} 
+                                    alt={image.alt} 
+                                    className="w-12 h-12" 
+                                />
+                            </motion.div>
+                        ))}
+                        
+                        {images.map((image, index) => (
+                            <motion.div 
+                                key={`duplicate-${index}`}
+                                className="skill-icon mx-4 p-3 glass-card hover-lift"
+                                whileHover={{ scale: 1.1, y: -5 }}
+                                transition={{ type: "spring", stiffness: 300 }}
+                            >
+                                <img 
+                                    src={image.src} 
+                                    alt={image.alt} 
+                                    className="w-12 h-12" 
+                                />
+                            </motion.div>
+                        ))}
                     </div>
-                
-                
-
-  </div>
-         
+                </div>
             </div>
-                <img src={star} alt="Star" className='-mt-6 absolute left-2 w-3  lg:top-16 lg:w-4'/>
-           </div>
+            
+            <motion.img 
+                src={star} 
+                alt="Star" 
+                className='absolute left-4 bottom-4 w-3 lg:w-4 opacity-40'
+                animate={{ rotate: -360 }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            />
+        </motion.div>
         </>
     )
 }

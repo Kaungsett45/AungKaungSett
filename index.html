@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="google-site-verification"
       content="J9yl_6DvyAUS0s_cUU91qQjJXS4ldnBKkKExTjIsFho"
     />
-    <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Bubbles&display=swap"
-    rel="stylesheet" media="all"
+
+    <title>Aung Kaung Sett — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Aung Kaung Sett is a full stack developer in Yangon, Myanmar, building web applications end to end with React, Java and Spring."
     />
-    <meta charset="UTF-8" />
+    <meta name="author" content="Aung Kaung Sett" />
+    <link rel="canonical" href="https://aungkaungsett.web.app/" />
+    <link rel="icon" type="image/png" href="/profile3.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aung Kaung Sett — Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full stack developer in Yangon, Myanmar. React on the front, Java and Spring behind it."
+    />
+    <meta property="og:url" content="https://aungkaungsett.web.app/" />
+    <meta property="og:image" content="https://aungkaungsett.web.app/preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Aung Kaung Sett - Fullstack Developer </title>
-    <link rel="icon" type="image/x-icon" href="/profile3.png">
+    <!-- The original type families, trimmed to the weights actually used
+         rather than loading the full variable ranges. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Set the theme before first paint so the page never flashes the wrong one. -->
+    <script>
+      (function () {
+        var stored = localStorage.getItem('theme')
+        var dark =
+          stored === 'dark' ||
+          (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+      })()
+    </script>
   </head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Aung Kaung Sett's portfolio showcasing the work and experience of a web developer. Explore projects, skills, and achievements in web development."
-  />
-  <meta name="title" content="Aung Kaung Sett">
-  <meta property="og:title" content="aung Kaung Sett">
-  <meta
-    name="keywords"
-    content="Fullstack,Fullstack Developer,Portfolio,Web development,Ui Ux design,Developer,aungkaungsett,Aung Kaung Sett"
-  />
-  <meta name="author" content="aungkaungsett" />
- 
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx" defer></script>
+    <script type="module" src="/src/main.jsx"></script>
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Aung Kaung Sett",
-        "jobTitle": "Full-Stack Developer",
+        "jobTitle": "Full Stack Developer",
         "url": "https://aungkaungsett.web.app",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Yangon",
+          "addressCountry": "MM"
+        },
         "sameAs": [
+          "https://github.com/Kaungsett45",
           "https://www.linkedin.com/in/aung-kaung-sett-4244b721a/"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Code Mal"
-        }
+        ]
       }
-      </script>
-      
+    </script>
   </body>
 </html>

@@ -1,44 +1,52 @@
+import { Link, useLocation } from 'react-router-dom'
+import ThemeToggle from '../component/ThemeToggle'
+import { profile, sections } from '../data/content'
 
-import { Outlet ,NavLink } from 'react-router-dom'
-import { motion } from "framer-motion"
-import { Link } from 'react-router-dom'
+export default function SiteHeader() {
+  const { pathname } = useLocation()
+  const onHome = pathname === '/'
 
-export default function Navigation(){
+  return (
+    <>
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-3 focus:py-2 focus:bg-accent-wash focus:text-accent"
+      >
+        Skip to content
+      </a>
 
-   
+      <header className="sticky top-0 z-40 bg-paper/85 backdrop-blur-md">
+        <nav className="flex items-center justify-between h-16 page">
+          <Link to="/" className="heading-brand !text-lg sm:!text-xl">
+            PORTFOLIO
+          </Link>
 
-    return(
-        <>
-        <motion.div
-      initial={{ opacity: 0, y: -50 }} // Start hidden and above the final position
-      animate={{ opacity: 1, y: 0 }} // Fade in and move to its final position
-      transition={{
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-      }}
-    >
-      <nav className="mt-2 py-1 relative  flex  justify-between items-center ">
-    
-            <h2 ><NavLink to="/" 
-               className="relative bg-[#1A8B9C] text-base font-roboto font-extrabold tracking-wide text-[#e2e9ee] py-2 px-4 xs:text-xl sm:text-2xl 
-            ">PORTFOLIO</NavLink></h2>
-            <div className=' flex  items-center '>
-                {/* <p className='mx-4 font-bold font-roboto text-lg xs:text-xl sm:mx-8 '><NavLink to="/blogs">Blogs</NavLink></p> */}
-                <Link to= "https://drive.google.com/file/d/1k93CoLzg3DmkOgl5yGklM31xO9eDwJ_E/view?usp=sharing" target="_blank">
-                <button className='
-               flex  border-[#1A8B9C] border-2 px-3 py-1 rounded-full items-center font-monst font-bold mr-4 xs:text-lg sm:text-xl lg:text-2xl
-                '
-                >RESUME</button></Link>
-            </div>
+          <div className="flex items-center gap-1 sm:gap-2">
+            {onHome && (
+              <ul className="items-center hidden gap-6 mr-4 list-none lg:flex">
+                {sections.map((section) => (
+                  <li key={section.id}>
+                    <a href={`#${section.id}`} className="transition-colors text-meta text-ink-faint hover:text-ink">
+                      {section.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
 
-            
+            <a
+              className="button"
+              href={profile.resume}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Résumé
+            </a>
+
+            <ThemeToggle />
+          </div>
         </nav>
-    </motion.div>
-
-       
-          <Outlet/>
-     
-        </>
-    )
+      </header>
+    </>
+  )
 }

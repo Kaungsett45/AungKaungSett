@@ -1,66 +1,54 @@
-import React, { Component } from "react";
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
+import { profile } from '../data/content'
+import Portrait from '../component/Portrait'
 
-const container = {
-    hidden: { opacity: 1 }, 
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2, 
-      },
-    },
-  };
-  
-  const item = {
-    hidden: { x:20, opacity: 0 }, 
-    visible: { x: 0, opacity: 1 }, 
-  };
-
-function SplashMessage() {
+/**
+ * A brief hold on the name, then out of the way. The parent owns the
+ * timing — this component only draws.
+ */
+export default function SplashScreen() {
   return (
-      <motion.div
-      className="flex items-center justify-center min-h-screen  overflow-hidden  font-monst font-extrabold text-lg text-[#1A8B9C] md:text-xl "
-      variants={container}
-      initial="hidden"
-      animate="visible"
+    <motion.div
+      className="fixed inset-0 z-50 grid bg-paper place-items-center"
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      aria-hidden="true"
     >
-      {['P', 'o', 'r', 't', 'f', 'o', 'l', 'i', 'o'].map((letter, index) => (
-        <motion.h2 key={index} className="px-1" variants={item}>
-          {letter}
-        </motion.h2>
-      ))}
+      <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <Portrait className="w-12 h-12 mx-auto mb-6" />
+        </motion.div>
+
+        <motion.p
+          className="font-display text-[clamp(2rem,7vw,3.25rem)] leading-none text-ink"
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {profile.name}
+        </motion.p>
+
+        <motion.div
+          className="h-px mx-auto mt-5 origin-left bg-accent"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+          style={{ width: 'clamp(140px, 30vw, 240px)' }}
+        />
+
+        <motion.p
+          className="mt-4 eyebrow"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.35 }}
+        >
+          {profile.role}
+        </motion.p>
+      </div>
     </motion.div>
-  );
-}
-
-export default function SplashScreen(WrappedComponent) {
-  return class extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        loading: true,
-      };
-    }
-
-    async componentDidMount() {
-      try {
-         setTimeout(() => {
-          this.setState({
-            loading: false,
-          });
-        }, 2000);
-      } catch (err) {
-        console.log(err);
-        this.setState({
-          loading: false,
-        });
-      }
-    }
-
-    render() {
-      if (this.state.loading) return SplashMessage();
-
-      return <WrappedComponent {...this.props} />;
-    }
-  };
+  )
 }

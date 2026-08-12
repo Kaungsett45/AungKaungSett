@@ -1,6 +1,7 @@
 import Section from '../component/Section'
 import Reveal from '../component/Reveal'
 import StackDiagram from '../component/StackDiagram'
+import RequestTrace from '../component/RequestTrace'
 import { projects } from '../data/content'
 
 function ExternalLink({ href, children }) {
@@ -64,18 +65,25 @@ export default function Projects() {
                   </div>
 
                   <div className={flipped ? 'md:order-1' : undefined}>
-                    <div className="flex items-start justify-between gap-6">
-                      <StackDiagram tiers={project.architecture} />
+                    {project.buildFlow ? (
+                      <RequestTrace
+                        intro={project.buildFlow.intro}
+                        stages={project.buildFlow.stages}
+                      />
+                    ) : (
+                      <div className="flex items-start justify-between gap-6">
+                        <StackDiagram tiers={project.architecture} />
 
-                      {project.image && (
-                        <img
-                          src={project.image}
-                          alt={`${project.title} preview`}
-                          loading="lazy"
-                          className="object-contain w-20 h-20 project-mockup shrink-0 md:w-24 md:h-24"
-                        />
-                      )}
-                    </div>
+                        {project.image && (
+                          <img
+                            src={project.image}
+                            alt={`${project.title} preview`}
+                            loading="lazy"
+                            className="object-contain w-20 h-20 project-mockup shrink-0 md:w-24 md:h-24"
+                          />
+                        )}
+                      </div>
+                    )}
                   </div>
                 </article>
               </Reveal>

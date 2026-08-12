@@ -24,7 +24,7 @@ export const profile = {
   // Two or three short paragraphs. Plain sentences, no emoji, no buzzwords.
   about: [
     'I work in JavaScript across the whole stack — React and TanStack on the front, Node and Express behind it, with MongoDB or Postgres and Sequelize underneath. Lately that has extended into mobile as well.',
-    'Started with Java and Spring in 2022 through ITPEC, then moved into the JS ecosystem. The backend grounding still shows: I design APIs I would actually want to consume.',
+    'I started with Java and Spring in 2022 through ITPEC before moving into the JS ecosystem. That backend background still shapes how I design APIs today.',
   ],
 
   // Served straight from /public — no Google Drive interstitial.
@@ -163,6 +163,19 @@ export const skills = [
 // data. TODO: these are inferred from each project's stack; correct any
 // that are wrong.
 export const projects = [
+  {
+    title: 'Univision',
+    year: '2026',
+    description:
+      'An enterprise surveillance platform built during my internship — live camera feeds, recording playback with clip export, roles, and audit logging across locations.',
+    stack: ['React', 'TanStack Router', 'Node', 'Express', 'MediaMTX'],
+    image: '/univisionmockup.svg',
+    architecture: [
+      { tier: 'Client', items: ['React', 'TanStack Router'] },
+      { tier: 'Service', items: ['Node/Express API', 'MediaMTX streaming'] },
+      { tier: 'Data', items: ['Recordings', 'Roles & audit logs'] },
+    ],
+  },
   {
     title: 'Rublet',
     year: '2024',

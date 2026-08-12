@@ -426,6 +426,37 @@ a:focus-visible .link-wipe {
   }
 }
 
+/* Compact request trace — reuses the stack-diagram rail for projects
+   that show "how it works" instead of a screenshot. */
+.request-trace-intro {
+  font-family: var(--font-body);
+  font-size: var(--text-meta);
+  color: var(--ink-muted);
+}
+
+.request-trace-tech {
+  color: var(--ink-faint);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.request-trace-title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.request-trace-code {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: var(--accent-wash);
+  padding: 0.15rem 0.5rem;
+}
+
 /* Teal rule under the title that wipes across on hover. */
 .project-title-rule {
   display: block;

@@ -37,23 +37,25 @@ export const socials = [
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/aung-kaung-sett-4244b721a/',
   },
-  { label: 'Email', href: 'mailto:rrocket438@gmail.com' },
+  { label: 'Email', href: 'mailto:aungkaungsett999@gmail.com' },
 ]
 
 export const contact = {
-  email: 'rrocket438@gmail.com',
-  phone: '+95 9663174880',
+  email: 'aungkaungsett999@gmail.com',
+  phone: '+95 9761720998',
   extra: [
     { label: 'Instagram', href: 'https://www.instagram.com/rezzwxx' },
     { label: 'X', href: 'https://x.com/kau72149604' },
   ],
 }
 
-// Rendered in this order. `to: null` renders as "Present".
+// Rendered in this order. `to: null` renders as "Present". `category` is
+// the small label beside the dates.
 export const experience = [
   {
     org: 'Property Seeker Myanmar',
     role: 'Full Stack Engineer',
+    category: 'On-site',
     logo: '/psm.jpeg',
     // Square lockup with the wordmark stacked inside it — needs the height.
     logoHeight: '4.25rem',
@@ -68,6 +70,7 @@ export const experience = [
   {
     org: 'Galaxy Wave',
     role: 'Software Engineer Intern',
+    category: 'Internship',
     logo: '/gw.jpg',
     logoHeight: '2.25rem',
     from: 'May 2026',
@@ -81,6 +84,7 @@ export const experience = [
   {
     org: 'Code Mal',
     role: 'Content Writer',
+    category: 'Volunteer',
     logo: '/codemal.svg',
     logoHeight: '2.5rem',
     from: 'Jan 2024',
@@ -162,12 +166,36 @@ export const skills = [
 // top to bottom. Two tiers or four both work — the diagram follows the
 // data. TODO: these are inferred from each project's stack; correct any
 // that are wrong.
+//
+// `category` is the small label beside the year (On-site, Internship,
+// Volunteer, Personal…). `appStore` / `playStore` render store links next
+// to code and demo.
 export const projects = [
   {
-    title: 'Univision',
+    title: 'Property Seeker Myanmar',
+    category: 'On-site',
     year: '2026',
     description:
-      'An enterprise surveillance platform built during my internship — live camera feeds, recording playback with clip export, roles, and audit logging across locations.',
+      'A real estate app for finding homes, apartments, and land to rent or buy in Myanmar. Shipping features and updates across the mobile apps and backend.',
+    // TODO: add the mobile framework and backend stack.
+    stack: ['iOS', 'Android'],
+    image: '/psm.jpeg',
+    architecture: [
+      { tier: 'Client', items: ['iOS app', 'Android app'] },
+      { tier: 'Service', items: ['API', 'Server deployment'] },
+      { tier: 'Data', items: ['Verified listings'] },
+    ],
+    appStore:
+      'https://apps.apple.com/mm/app/property-seeker-myanmar/id6815570508',
+    playStore:
+      'https://play.google.com/store/apps/details?id=com.propertyseekermm.app',
+  },
+  {
+    title: 'Univision',
+    category: 'Internship',
+    year: '2026',
+    description:
+      'An enterprise surveillance platform from my internship — live camera feeds, recording playback with clip export, roles, and audit logging across locations. Worked on the recording playback.',
     stack: ['React', 'TanStack Router', 'Node', 'Express', 'MediaMTX'],
     image: '/univisionmockup.svg',
     architecture: [
@@ -178,6 +206,7 @@ export const projects = [
   },
   {
     title: 'Rublet',
+    category: 'Personal',
     year: '2024',
     description:
       'A movie streaming platform with full-text search and filtering across the catalogue.',
@@ -193,6 +222,7 @@ export const projects = [
   },
   {
     title: 'Quizzi',
+    category: 'Personal',
     year: '2024',
     description:
       'An interactive quiz system with question banks and real-time scoring.',
@@ -208,6 +238,7 @@ export const projects = [
   },
   {
     title: 'Quote Generator',
+    category: 'Personal',
     year: '2024',
     description:
       'A quote generator with shareable cards, built on React and Firebase.',

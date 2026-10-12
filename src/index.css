@@ -267,6 +267,20 @@ a:focus-visible .link-wipe {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Category pill beside a project's year or a job's dates. */
+.category {
+  font-family: var(--font-meta);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-wash);
+  padding: 0.28rem 0.7rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
 .tag:hover {
   background: var(--accent);
   color: var(--on-accent);

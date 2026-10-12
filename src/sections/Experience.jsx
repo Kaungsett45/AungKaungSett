@@ -32,8 +32,13 @@ export default function Experience() {
                       </p>
                     </div>
 
-                    <span className="meta shrink-0">
-                      {job.from} — {job.to ?? 'Present'}
+                    <span className="flex items-center gap-3 shrink-0">
+                      {job.category && (
+                        <span className="category">{job.category}</span>
+                      )}
+                      <span className="meta">
+                        {job.from} — {job.to ?? 'Present'}
+                      </span>
                     </span>
                   </div>
 

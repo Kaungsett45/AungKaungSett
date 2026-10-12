@@ -39,7 +39,12 @@ export default function Projects() {
 
                     <div className="flex items-baseline justify-between gap-4 mt-5">
                       <h3 className="title">{project.title}</h3>
-                      <span className="meta shrink-0">{project.year}</span>
+                      <span className="flex items-center gap-3 shrink-0">
+                        {project.category && (
+                          <span className="category">{project.category}</span>
+                        )}
+                        <span className="meta">{project.year}</span>
+                      </span>
                     </div>
 
                     <span className="project-title-rule" aria-hidden="true" />
@@ -60,6 +65,12 @@ export default function Projects() {
                       )}
                       {project.demo && (
                         <ExternalLink href={project.demo}>Live demo</ExternalLink>
+                      )}
+                      {project.appStore && (
+                        <ExternalLink href={project.appStore}>App Store</ExternalLink>
+                      )}
+                      {project.playStore && (
+                        <ExternalLink href={project.playStore}>Google Play</ExternalLink>
                       )}
                     </div>
                   </div>

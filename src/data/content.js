@@ -28,7 +28,7 @@ export const profile = {
   ],
 
   // Served straight from /public — no Google Drive interstitial.
-  resume: '/AKS.pdf',
+  resume: '/Aung_Kaung_SettCV.pdf',
 }
 
 export const socials = [

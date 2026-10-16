@@ -205,9 +205,25 @@ export const projects = [
     ],
   },
   {
+    title: 'Quote Generator',
+    category: 'Personal',
+    year: '2023',
+    description:
+      'A quote generator with shareable cards, built on React and Firebase.',
+    stack: ['React', 'Tailwind CSS', 'Firebase'],
+    image: '/quotemockup.svg',
+    architecture: [
+      { tier: 'Client', items: ['React', 'Tailwind CSS'] },
+      { tier: 'Service', items: ['Firebase SDK', 'Card generator'] },
+      { tier: 'Data', items: ['Firestore'] },
+    ],
+    code: 'https://github.com/Kaungsett45/quotegenerator',
+    demo: 'https://drive.google.com/file/d/1XK7gtD-9WAjZroafdMeEF7cW7B5udbIh/view?usp=sharing',
+  },
+  {
     title: 'Rublet',
     category: 'Personal',
-    year: '2024',
+    year: '2022',
     description:
       'A movie streaming platform with full-text search and filtering across the catalogue.',
     stack: ['Java', 'Spring', 'CSS'],
@@ -223,7 +239,7 @@ export const projects = [
   {
     title: 'Quizzi',
     category: 'Personal',
-    year: '2024',
+    year: '2022',
     description:
       'An interactive quiz system with question banks and real-time scoring.',
     stack: ['Java', 'Spring', 'CSS'],
@@ -235,22 +251,6 @@ export const projects = [
     ],
     code: 'https://github.com/Kaungsett45/QuzziSystem',
     demo: 'https://drive.google.com/file/d/1dS7NgOjawJAhvOGwJJ8wSl1UwvjRwLtT/view?usp=sharing',
-  },
-  {
-    title: 'Quote Generator',
-    category: 'Personal',
-    year: '2024',
-    description:
-      'A quote generator with shareable cards, built on React and Firebase.',
-    stack: ['React', 'Tailwind CSS', 'Firebase'],
-    image: '/quotemockup.svg',
-    architecture: [
-      { tier: 'Client', items: ['React', 'Tailwind CSS'] },
-      { tier: 'Service', items: ['Firebase SDK', 'Card generator'] },
-      { tier: 'Data', items: ['Firestore'] },
-    ],
-    code: 'https://github.com/Kaungsett45/quotegenerator',
-    demo: 'https://drive.google.com/file/d/1XK7gtD-9WAjZroafdMeEF7cW7B5udbIh/view?usp=sharing',
   },
 ]
 
